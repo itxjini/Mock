@@ -1,823 +1,762 @@
 const QUESTION_BANK = [
 
-  
-  { id:1, section:"Hardware", topic:"Processor",
-    q:"Which component is called the 'brain' of the computer?",
-    opts:["Hard Disk Drive","Central Processing Unit (CPU)","RAM","Motherboard"], ans:1, diff:"easy" },
+  // ============================================================
+  // SECTION: Operating System (Class 10)
+  // ============================================================
 
-  { id:2, section:"Hardware", topic:"Processor",
-    q:"What does CPU stand for?",
-    opts:["Central Processing Unit","Computer Processing Utility","Core Processing Unit","Central Program Utility"], ans:0, diff:"easy" },
+  { id:1, section:"Software", topic:"Operating System",
+    q:"Which of the following best describes the primary role of an Operating System?",
+    opts:["It converts AC power to DC power for components","It acts as a bridge between hardware and user, managing all hardware resources","It stores boot instructions on a ROM chip","It renders graphics for display output"], ans:1, diff:"medium" },
 
-  { id:3, section:"Hardware", topic:"Processor",
-    q:"Which of the following is an Intel processor series?",
-    opts:["Ryzen","Core i5","Snapdragon","Exynos"], ans:1, diff:"easy" },
+  { id:2, section:"Software", topic:"Operating System",
+    q:"During the boot process, what does BIOS/UEFI perform immediately after power is turned on?",
+    opts:["It loads the desktop","It runs a Power-On Self Test (POST) to check all hardware","It opens Microsoft Word","It creates a restore point"], ans:1, diff:"medium" },
 
-  { id:4, section:"Hardware", topic:"Processor",
-    q:"Which of the following is an AMD processor series?",
-    opts:["Core i7","Pentium","Ryzen","Celeron"], ans:2, diff:"easy" },
+  { id:3, section:"Software", topic:"Operating System",
+    q:"Which type of OS allows many users to connect and use the same computer simultaneously, managing each session separately?",
+    opts:["Single-User OS","Multitasking OS","Multi-User OS","Real-Time OS"], ans:2, diff:"medium" },
 
-  { id:5, section:"Hardware", topic:"Processor",
-    q:"What does the CPU do with software instructions?",
-    opts:["Stores them permanently","Processes and executes them","Displays them on screen","Sends them to the printer"], ans:1, diff:"medium" },
+  { id:4, section:"Software", topic:"Operating System",
+    q:"A Multitasking OS can run many programs at the same time because the CPU:",
+    opts:["Has unlimited cores","Switches between tasks so rapidly it appears simultaneous","Stores all programs in ROM","Runs each program in a separate BIOS"], ans:1, diff:"hard" },
 
-  { id:6, section:"Hardware", topic:"Processor",
-    q:"Clock speed of a CPU is measured in:",
-    opts:["Megabytes","Gigahertz (GHz)","Pixels","Amperes"], ans:1, diff:"medium" },
+  { id:5, section:"Software", topic:"Operating System",
+    q:"Which is the CORRECT sequence of the boot process?",
+    opts:["OS Loads → BIOS → POST → Desktop","BIOS → Desktop → POST → Power Button","Power Button → BIOS/UEFI → OS Loads → Desktop Ready","Desktop Ready → POST → BIOS → Power Button"], ans:2, diff:"hard" },
 
-  { id:7, section:"Hardware", topic:"Processor",
-    q:"Having more CPU cores means:",
-    opts:["More storage space","Larger screen","More processors inside the chip","Faster internet"], ans:2, diff:"medium" },
+  { id:6, section:"Software", topic:"Operating System",
+    q:"Device drivers are special programs the OS uses to communicate with:",
+    opts:["Users via the keyboard","The internet","Hardware components","Other application software"], ans:2, diff:"medium" },
 
-  { id:8, section:"Hardware", topic:"Processor",
-    q:"Every action performed on a computer goes through the:",
-    opts:["Monitor","Keyboard","CPU","Hard Disk"], ans:2, diff:"easy" },
-
-  
-  { id:9, section:"Hardware", topic:"Storage & RAM",
-    q:"RAM stands for:",
-    opts:["Read Access Memory","Random Access Memory","Rapid Array Memory","Read All Memory"], ans:1, diff:"easy" },
-
-  { id:10, section:"Hardware", topic:"Storage & RAM",
-    q:"RAM is an example of:",
-    opts:["Non-volatile storage","Volatile storage","Secondary storage","Permanent storage"], ans:1, diff:"easy" },
-
-  { id:11, section:"Hardware", topic:"Storage & RAM",
-    q:"When power is turned off, which memory LOSES all its data?",
-    opts:["ROM","SSD","RAM","Hard Disk Drive"], ans:2, diff:"easy" },
-
-  { id:12, section:"Hardware", topic:"Storage & RAM",
-    q:"Which of these is a NON-VOLATILE storage device?",
-    opts:["RAM","Cache Memory","CPU Register","Solid State Drive (SSD)"], ans:3, diff:"easy" },
-
-  { id:13, section:"Hardware", topic:"Storage & RAM",
-    q:"What is PRIMARY storage used for?",
-    opts:["Storing files permanently","Directly accessed by CPU during processing","Connecting to the internet","Displaying graphics"], ans:1, diff:"medium" },
-
-  { id:14, section:"Hardware", topic:"Storage & RAM",
-    q:"Which of these is an example of PRIMARY storage?",
-    opts:["Hard Disk Drive","USB Flash Drive","RAM","CD/DVD"], ans:2, diff:"medium" },
-
-  { id:15, section:"Hardware", topic:"Storage & RAM",
-    q:"Which of these is an example of SECONDARY storage?",
-    opts:["RAM","Cache","CPU Register","USB Flash Drive"], ans:3, diff:"easy" },
-
-  { id:16, section:"Hardware", topic:"Storage & RAM",
-    q:"More RAM allows a computer to:",
-    opts:["Run programs faster permanently","Run more programs at the same time","Store more files on disk","Use less electricity"], ans:1, diff:"medium" },
-
-  { id:17, section:"Hardware", topic:"Storage & RAM",
-    q:"Which storage type is characterized as FAST and TEMPORARY?",
-    opts:["Hard Disk Drive","SSD","RAM","CD/DVD"], ans:2, diff:"easy" },
-
-  { id:18, section:"Hardware", topic:"Storage & RAM",
-    q:"What type of storage is a Memory Card?",
-    opts:["Volatile — loses data on shutdown","Non-volatile — retains data permanently","Only used inside the CPU","A type of RAM"], ans:1, diff:"medium" },
-
-  
-  { id:19, section:"Hardware", topic:"ROM",
-    q:"ROM stands for:",
-    opts:["Random Only Memory","Read Only Memory","Rapid Output Memory","Recorded Output Module"], ans:1, diff:"easy" },
-
-  { id:20, section:"Hardware", topic:"ROM",
-    q:"ROM is characterized as:",
-    opts:["Volatile memory that loses data on shutdown","Non-volatile memory that retains data permanently","Secondary storage for large files","An output device for display"], ans:1, diff:"easy" },
-
-  { id:21, section:"Hardware", topic:"ROM",
-    q:"EPROM (Erasable Programmable ROM) is erased using:",
-    opts:["Electrical signals","Ultraviolet light","Extreme heat","Magnetic fields"], ans:1, diff:"hard" },
-
-  { id:22, section:"Hardware", topic:"ROM",
-    q:"EEPROM stands for:",
-    opts:["Extra Erasable Programmable ROM","Electrically Erasable Programmable ROM","Extended Erasable Program ROM","Electronically Edited Program ROM"], ans:1, diff:"hard" },
-
-  { id:23, section:"Hardware", topic:"ROM",
-    q:"EEPROM can be erased using:",
-    opts:["Ultraviolet light","Extreme heat","Electrical signals","Magnetic fields"], ans:2, diff:"hard" },
-
-  { id:24, section:"Hardware", topic:"ROM",
-    q:"Which type of ROM is programmed exactly ONCE and cannot be changed?",
-    opts:["EPROM","EEPROM","PROM","Flash ROM"], ans:2, diff:"hard" },
-
-  { id:25, section:"Hardware", topic:"ROM",
-    q:"The main function of ROM in a computer is to:",
-    opts:["Store your documents and files","Store boot instructions needed to start the computer","Act as working memory for programs","Display graphics on screen"], ans:1, diff:"medium" },
-
-  
-  { id:26, section:"Hardware", topic:"Cache Memory",
-    q:"Cache memory is located:",
-    opts:["On the hard disk","Inside or very near the CPU","In the monitor","On the keyboard"], ans:1, diff:"easy" },
-
-  { id:27, section:"Hardware", topic:"Cache Memory",
-    q:"Which level of Cache is the LARGEST in size but slowest among cache levels?",
-    opts:["L1 Cache","L2 Cache","L3 Cache","L0 Cache"], ans:2, diff:"medium" },
-
-  { id:28, section:"Hardware", topic:"Cache Memory",
-    q:"Which level of Cache is the SMALLEST and FASTEST?",
-    opts:["L3 Cache","L2 Cache","L1 Cache","L0 Cache"], ans:2, diff:"medium" },
-
-  { id:29, section:"Hardware", topic:"Cache Memory",
-    q:"Cache memory size is measured in:",
-    opts:["Gigabytes (GB)","Terabytes (TB)","Kilobytes (KB) to Megabytes (MB)","Petabytes (PB)"], ans:2, diff:"medium" },
-
-  { id:30, section:"Hardware", topic:"Cache Memory",
-    q:"Cache memory stores:",
-    opts:["Permanent files and documents","Frequently used data for fast CPU access","Boot instructions for the BIOS","The operating system permanently"], ans:1, diff:"medium" },
-
-  { id:31, section:"Hardware", topic:"Cache Memory",
-    q:"How many levels of cache are typically found in a modern CPU?",
-    opts:["1 (L1 only)","2 (L1, L2)","3 (L1, L2, L3)","4 (L1, L2, L3, L4)"], ans:2, diff:"medium" },
-
-  
-  { id:32, section:"Hardware", topic:"Registers",
-    q:"Registers are the __________ memory in a computer system.",
-    opts:["Largest and slowest","Fastest and smallest","Most common type of","Permanent non-volatile"], ans:1, diff:"medium" },
-
-  { id:33, section:"Hardware", topic:"Registers",
-    q:"Where are CPU registers located?",
-    opts:["On the hard disk","Inside the CPU itself","On the motherboard chipset","In the RAM modules"], ans:1, diff:"easy" },
-
-  { id:34, section:"Hardware", topic:"Registers",
-    q:"What does the Accumulator (ACC) register store?",
-    opts:["The current instruction being executed","Memory addresses","Results of calculations","The next instruction's address"], ans:0, diff:"hard" },
-
-  { id:35, section:"Hardware", topic:"Registers",
-    q:"What is the correct order of the memory hierarchy from FASTEST to SLOWEST?",
-    opts:["RAM → Cache → Registers → HDD","Registers → Cache → RAM → HDD/SSD","HDD → RAM → Cache → Registers","Cache → Registers → RAM → SSD"], ans:1, diff:"medium" },
-
-  { id:36, section:"Hardware", topic:"Registers",
-    q:"The Program Counter (PC) register holds:",
-    opts:["The result of the last calculation","The current instruction being decoded","The address of the next instruction to execute","The total number of programs running"], ans:2, diff:"hard" },
-
-  
-  { id:37, section:"Hardware", topic:"Buses",
-    q:"What is a computer bus?",
-    opts:["A type of software program","A pathway used to transfer data inside a computer","A type of external storage device","A program that controls the screen"], ans:1, diff:"easy" },
-
-  { id:38, section:"Hardware", topic:"Buses",
-    q:"Which type of bus carries the ACTUAL DATA between computer components?",
-    opts:["Control Bus","Address Bus","Data Bus","System Bus"], ans:2, diff:"medium" },
-
-  { id:39, section:"Hardware", topic:"Buses",
-    q:"The Address Bus is described as:",
-    opts:["Bidirectional — carries data both ways","Unidirectional — CPU sends memory location","Used only by RAM modules","Part of the display system"], ans:1, diff:"medium" },
-
-  { id:40, section:"Hardware", topic:"Buses",
-    q:"Which bus carries read/write commands and timing signals?",
-    opts:["Data Bus","Address Bus","Control Bus","Memory Bus"], ans:2, diff:"medium" },
-
-  { id:41, section:"Hardware", topic:"Buses",
-    q:"The Data Bus is described as:",
-    opts:["Unidirectional — CPU to memory only","Bidirectional — sends data both to and from the CPU","Used only for internet connections","Carries only control signals"], ans:1, diff:"medium" },
-
-  
-  { id:42, section:"Hardware", topic:"Motherboard",
-    q:"The motherboard is also known as the:",
-    opts:["CPU Board","Display Board","System Board (Mainboard)","Memory Board"], ans:2, diff:"easy" },
-
-  { id:43, section:"Hardware", topic:"Motherboard",
-    q:"What is the main function of the motherboard?",
-    opts:["To store large amounts of data permanently","To connect all hardware components together","To display images on the screen","To provide internet connectivity"], ans:1, diff:"easy" },
-
-  { id:44, section:"Hardware", topic:"Motherboard",
-    q:"Which component on the motherboard physically holds and connects the processor?",
-    opts:["SATA Port","RAM Slot (DIMM)","CPU Socket","PCIe Expansion Slot"], ans:2, diff:"medium" },
-
-  { id:45, section:"Hardware", topic:"Motherboard",
-    q:"SATA Ports on the motherboard are used to connect:",
-    opts:["RAM modules","Hard drives and SSDs","Graphics cards","Power supply"], ans:1, diff:"medium" },
-
-  { id:46, section:"Hardware", topic:"Motherboard",
-    q:"The motherboard is described as the __________ of the computer.",
-    opts:["Brain","Backbone","Heart","Lungs"], ans:1, diff:"easy" },
-
-  { id:47, section:"Hardware", topic:"Motherboard",
-    q:"PCIe Expansion Slots on the motherboard are used for:",
-    opts:["Connecting hard drives","Inserting RAM modules","GPU, sound card, and network card","Connecting USB devices"], ans:2, diff:"medium" },
-
-  
-  { id:48, section:"Hardware", topic:"BIOS",
-    q:"BIOS stands for:",
-    opts:["Basic Input Output System","Binary Input Output Storage","Boot Input Output Software","Basic Integrated Output System"], ans:0, diff:"easy" },
-
-  { id:49, section:"Hardware", topic:"BIOS",
-    q:"Where is BIOS stored?",
-    opts:["On the hard disk drive","On a ROM chip on the motherboard","In RAM during operation","On the CPU itself"], ans:1, diff:"medium" },
-
-  { id:50, section:"Hardware", topic:"BIOS",
-    q:"What is the PRIMARY function of BIOS when a computer powers on?",
-    opts:["Loads Microsoft Office applications","Checks all hardware and loads the Operating System","Establishes internet connection","Encrypts and saves user files"], ans:1, diff:"medium" },
-
-  { id:51, section:"Hardware", topic:"BIOS",
-    q:"What is the correct order of the boot process?",
-    opts:["OS loads → BIOS activates → Power button","Desktop ready → Power button → BIOS","Power button → BIOS activates → OS loads → Desktop ready","BIOS → Power button → OS → Desktop"], ans:2, diff:"medium" },
-
-  { id:52, section:"Hardware", topic:"BIOS",
-    q:"BIOS is the __________ software that runs when you turn on your computer.",
-    opts:["Last","Fastest","First","Largest"], ans:2, diff:"easy" },
-
-  
-  { id:53, section:"Hardware", topic:"Ports & Connectors",
-    q:"A PORT is defined as:",
-    opts:["The plug at the end of a cable","A physical opening (socket) on a computer where you plug in a device","A type of volatile RAM","An internal CPU component"], ans:1, diff:"easy" },
-
-  { id:54, section:"Hardware", topic:"Ports & Connectors",
-    q:"A CONNECTOR is defined as:",
-    opts:["A socket (opening) on the computer body","The plug at the end of a cable","A type of volatile RAM","An internal CPU component"], ans:1, diff:"easy" },
-
-  { id:55, section:"Hardware", topic:"Ports & Connectors",
-    q:"Which port is used to connect a monitor or TV for high-definition display output?",
-    opts:["USB Port","Audio Jack","HDMI Port","Ethernet Port"], ans:2, diff:"easy" },
-
-  { id:56, section:"Hardware", topic:"Ports & Connectors",
-    q:"Which port is used for a wired internet connection?",
-    opts:["USB Port","HDMI Port","Audio Jack","Ethernet Port"], ans:3, diff:"easy" },
-
-  { id:57, section:"Hardware", topic:"Ports & Connectors",
-    q:"The VGA port is used for:",
-    opts:["Connecting headphones","Older monitor or projector output","Wired internet","USB devices"], ans:1, diff:"medium" },
-
-  { id:58, section:"Hardware", topic:"Ports & Connectors",
-    q:"USB ports are commonly used to connect:",
-    opts:["Monitors only","Mouse, keyboard, and pen drives","Only printers","Internet cables"], ans:1, diff:"easy" },
-
-  
-  { id:59, section:"Hardware", topic:"Operating System",
-    q:"An Operating System (OS) is responsible for managing:",
-    opts:["Only the CPU processing speed","Only the file storage system","Hardware, memory, files, devices, and the user interface","Only the internet and network connection"], ans:2, diff:"medium" },
-
-  { id:60, section:"Hardware", topic:"Operating System",
-    q:"Which of the following is an example of an Operating System?",
-    opts:["Microsoft Word","Google Chrome","Windows 11","Adobe Photoshop"], ans:2, diff:"easy" },
-
-  { id:61, section:"Hardware", topic:"Operating System",
-    q:"Which of the following is an example of a Multi-User Operating System?",
-    opts:["Windows 11 Home Edition","Linux Server / Unix","MS-DOS","Android Mobile OS"], ans:1, diff:"medium" },
-
-  { id:62, section:"Hardware", topic:"Operating System",
-    q:"A Multitasking OS allows you to:",
-    opts:["Only run one program at a time","Run multiple programs simultaneously","Only serve one user","Only connect to the internet"], ans:1, diff:"easy" },
-
-  { id:63, section:"Hardware", topic:"Operating System",
-    q:"Which OS function manages which program uses the CPU and when?",
+  { id:7, section:"Software", topic:"Operating System",
+    q:"Which OS function is responsible for dividing CPU time among running programs?",
     opts:["File Management","Device Management","Process Management","User Interface"], ans:2, diff:"hard" },
 
-  { id:64, section:"Hardware", topic:"Operating System",
-    q:"The boot process step AFTER BIOS hardware check is:",
-    opts:["Power button is pressed","RAM is cleared","The Operating System loads","The CPU is formatted"], ans:2, diff:"medium" },
-
-  
-  { id:65, section:"MS Word", topic:"Word Basics",
-    q:"What is Microsoft Word primarily used for?",
-    opts:["Creating spreadsheets","Creating and editing documents","Managing databases","Editing photos"], ans:1, diff:"easy" },
-
-  { id:66, section:"MS Word", topic:"Word Basics",
-    q:"The keyboard shortcut to SAVE a document in MS Word is:",
-    opts:["Ctrl + P","Ctrl + O","Ctrl + S","Ctrl + A"], ans:2, diff:"easy" },
-
-  { id:67, section:"MS Word", topic:"Word Basics",
-    q:"The keyboard shortcut to PRINT a document in MS Word is:",
-    opts:["Ctrl + S","Ctrl + P","Ctrl + A","Ctrl + F"], ans:1, diff:"easy" },
-
-  { id:68, section:"MS Word", topic:"Word Basics",
-    q:"To insert a table in MS Word, you go to:",
-    opts:["Home tab → Table","Insert tab → Table","Layout tab → Table","References tab → Table"], ans:1, diff:"easy" },
-
-  { id:69, section:"MS Word", topic:"Word Basics",
-    q:"To insert a picture in MS Word, you go to:",
-    opts:["Home tab → Pictures","Layout tab → Pictures","Insert tab → Pictures → This Device","Design tab → Pictures"], ans:2, diff:"easy" },
-
-  
-  { id:70, section:"MS Word", topic:"Text Formatting",
-    q:"The keyboard shortcut for CENTER alignment in MS Word is:",
-    opts:["Ctrl + L","Ctrl + R","Ctrl + E","Ctrl + J"], ans:2, diff:"easy" },
-
-  { id:71, section:"MS Word", topic:"Text Formatting",
-    q:"The keyboard shortcut for JUSTIFY alignment in MS Word is:",
-    opts:["Ctrl + L","Ctrl + R","Ctrl + E","Ctrl + J"], ans:3, diff:"easy" },
-
-  { id:72, section:"MS Word", topic:"Text Formatting",
-    q:"The keyboard shortcut for LEFT alignment in MS Word is:",
-    opts:["Ctrl + L","Ctrl + R","Ctrl + E","Ctrl + J"], ans:0, diff:"easy" },
-
-  { id:73, section:"MS Word", topic:"Text Formatting",
-    q:"JUSTIFY alignment means:",
-    opts:["Text starts from the left side only","Text appears in the center","Text is spread evenly across the page with clean paragraph edges","Text is aligned to the right side"], ans:2, diff:"medium" },
-
-  { id:74, section:"MS Word", topic:"Text Formatting",
-    q:"Font Style (Font Family) in MS Word controls the:",
-    opts:["Size of the text","Color of the text","Design or appearance of the text","Alignment of the text"], ans:2, diff:"easy" },
-
-  { id:75, section:"MS Word", topic:"Text Formatting",
-    q:"To change text color in MS Word, you go to:",
-    opts:["Insert tab → Font Color","Home tab → Font Color","Layout tab → Font Color","Design tab → Font Color"], ans:1, diff:"easy" },
-
-  
-  { id:76, section:"MS Word", topic:"Styles & Paragraph",
-    q:"The benefit of using Heading Styles in MS Word is:",
-    opts:["It only changes the color","It provides consistent formatting and professional look","It only changes the font size","It only works on the first page"], ans:1, diff:"medium" },
-
-  { id:77, section:"MS Word", topic:"Styles & Paragraph",
-    q:"Which Heading style is used for the MAIN TITLE of a document?",
-    opts:["Normal","Heading 2","Heading 3","Heading 1"], ans:3, diff:"easy" },
-
-  { id:78, section:"MS Word", topic:"Styles & Paragraph",
-    q:"Line Spacing in MS Word controls:",
-    opts:["The font size between words","The space between lines of text","The margin at the top of the page","The number of columns"], ans:1, diff:"easy" },
-
-  { id:79, section:"MS Word", topic:"Styles & Paragraph",
-    q:"Paragraph indentation moves text:",
-    opts:["To a new page","Away from the margin (inward)","To a different font","To a larger size"], ans:1, diff:"medium" },
-
-  
-  { id:80, section:"MS Word", topic:"Header & Footer",
-    q:"Which Ribbon tab is used to insert a Header or Footer in Microsoft Word?",
-    opts:["Home Tab","Layout Tab","Insert Tab","References Tab"], ans:2, diff:"easy" },
-
-  { id:81, section:"MS Word", topic:"Header & Footer",
-    q:"A HEADER in MS Word appears:",
-    opts:["At the bottom of every page","At the top of every page","Only on the first page","In the middle of every page"], ans:1, diff:"easy" },
-
-  { id:82, section:"MS Word", topic:"Header & Footer",
-    q:"A FOOTER in MS Word appears:",
-    opts:["At the top of every page","At the bottom of every page","Only on the last page","In the left margin"], ans:1, diff:"easy" },
-
-  { id:83, section:"MS Word", topic:"Header & Footer",
-    q:"Page numbers are typically placed in the:",
-    opts:["Body of the document","Table of Contents","Header or Footer","Title section only"], ans:2, diff:"easy" },
-
-  
-  { id:84, section:"MS Word", topic:"Editing & Find/Replace",
-    q:"The keyboard shortcut CTRL + F in MS Word is used to:",
-    opts:["Format text","Find specific text in a document","Save the file","Select all content"], ans:1, diff:"easy" },
-
-  { id:85, section:"MS Word", topic:"Editing & Find/Replace",
-    q:"The keyboard shortcut CTRL + H in MS Word is used to:",
-    opts:["Find specific text in a document","Find and Replace text throughout the document","Select all content","Save the document"], ans:1, diff:"easy" },
-
-  { id:86, section:"MS Word", topic:"Editing & Find/Replace",
-    q:"CTRL + A in MS Word is used to:",
-    opts:["Align text to the left","Select ALL content in the document","Open a new document","Close the document"], ans:1, diff:"easy" },
-
-  { id:87, section:"MS Word", topic:"Editing & Find/Replace",
-    q:"To replace every occurrence of 'Computer' with 'Laptop' in a document, you would use:",
-    opts:["Ctrl + F (Find)","Ctrl + H (Find & Replace)","Ctrl + A (Select All)","Ctrl + Z (Undo)"], ans:1, diff:"easy" },
-
-  
-  { id:88, section:"MS Word", topic:"Page Setup",
-    q:"Page Setup options in MS Word are found under the:",
-    opts:["Home Tab","Insert Tab","Layout Tab","References Tab"], ans:2, diff:"easy" },
-
-  { id:89, section:"MS Word", topic:"Page Setup",
-    q:"Which page orientation makes the page WIDER than it is tall?",
-    opts:["Portrait","Landscape","A4","Legal"], ans:1, diff:"easy" },
-
-  { id:90, section:"MS Word", topic:"Page Setup",
-    q:"The default paper size in most Word documents is:",
-    opts:["A3","Legal","A4","Letter (US)"], ans:2, diff:"medium" },
-
-  { id:91, section:"MS Word", topic:"Page Setup",
-    q:"'Narrow' margin setting in MS Word means:",
-    opts:["Larger margins than default","Smaller margins — more text fits on the page","Only the top margin is changed","The page has no margins"], ans:1, diff:"medium" },
-
-  { id:92, section:"MS Word", topic:"Page Setup",
-    q:"Landscape orientation is especially useful for:",
-    opts:["Short poems and letters","Tables and charts that are wide","Portrait photos","Single-column text"], ans:1, diff:"medium" },
-
-  
-  { id:93, section:"MS Word", topic:"Watermark & Page Color",
-    q:"A Watermark in MS Word:",
-    opts:["Only appears on the final page","Appears as faded text or image in the background of every page","Is placed inside a text box","Only becomes visible when printed"], ans:1, diff:"easy" },
-
-  { id:94, section:"MS Word", topic:"Watermark & Page Color",
-    q:"To insert a Watermark in MS Word, you go to:",
-    opts:["Insert tab → Watermark","Home tab → Watermark","Design tab → Watermark","Layout tab → Watermark"], ans:2, diff:"easy" },
-
-  { id:95, section:"MS Word", topic:"Watermark & Page Color",
-    q:"Common Watermark labels used in documents are:",
-    opts:["Title, Author, Chapter","DRAFT, CONFIDENTIAL, SAMPLE","Header, Footer, Body","Bold, Italic, Underline"], ans:1, diff:"easy" },
-
-  { id:96, section:"MS Word", topic:"Watermark & Page Color",
-    q:"Page Color in MS Word changes the:",
-    opts:["Color of all text in the document","Background color of the entire document","Color of the page border only","Color of headers and footers only"], ans:1, diff:"easy" },
-
-  { id:97, section:"MS Word", topic:"Watermark & Page Color",
-    q:"Page Color is found under which tab in MS Word?",
-    opts:["Insert Tab","Home Tab","Layout Tab","Design Tab"], ans:3, diff:"medium" },
-
-  
-  { id:98, section:"MS Word", topic:"Page Break & Section Break",
-    q:"Pressing CTRL + Enter in MS Word inserts a:",
-    opts:["Section Break (Next Page)","Page Break — forces text to a new page","Column Break","Paragraph Break only"], ans:1, diff:"medium" },
-
-  { id:99, section:"MS Word", topic:"Page Break & Section Break",
-    q:"A Section Break in MS Word allows:",
-    opts:["Only changing the font in one section","Each section to have its own formatting","Only changing the page color","Splitting text into two columns permanently"], ans:1, diff:"medium" },
-
-  { id:100, section:"MS Word", topic:"Page Break & Section Break",
-    q:"A Page Break is used to:",
-    opts:["Delete content on a page","Force text to start on a new page","Change the margin settings","Add a header to the document"], ans:1, diff:"easy" },
-
-  
-  { id:101, section:"MS Word", topic:"Hyphenation",
-    q:"Hyphenation in MS Word is used to:",
-    opts:["Add dashes to page numbers","Split long words at the end of a line to reduce gaps","Convert text to uppercase","Add bullet points to lists"], ans:1, diff:"medium" },
-
-  { id:102, section:"MS Word", topic:"Hyphenation",
-    q:"To enable Automatic Hyphenation, you go to:",
-    opts:["Home tab → Hyphenation","Insert tab → Hyphenation","Layout tab → Hyphenation → Automatic","Design tab → Hyphenation"], ans:2, diff:"medium" },
-
-  { id:103, section:"MS Word", topic:"Hyphenation",
-    q:"Hyphenation is especially useful with which text alignment?",
-    opts:["Left-aligned text","Center-aligned text","Right-aligned text","Justified text"], ans:3, diff:"hard" },
-
-  
-  { id:104, section:"MS Word", topic:"Shapes",
-    q:"To insert a Shape in MS Word, you go to:",
-    opts:["Home tab → Shapes","Layout tab → Shapes","Insert tab → Shapes","Design tab → Shapes"], ans:2, diff:"easy" },
-
-  { id:105, section:"MS Word", topic:"Shapes",
-    q:"After inserting a shape in Word, you can add text inside by:",
-    opts:["Double-clicking and typing","Going to Insert → Text","Using Ctrl + T","Shapes cannot contain text"], ans:0, diff:"medium" },
-
-  { id:106, section:"MS Word", topic:"Shapes",
-    q:"To change the style or color of a Shape in Word, you:",
-    opts:["Go to Insert tab","Right-click → Format Shape","Use Ctrl + F","Go to Layout tab"], ans:1, diff:"medium" },
-
-  
-  { id:107, section:"MS Word", topic:"Table of Contents",
-    q:"To insert an automatic Table of Contents in MS Word, you navigate to:",
-    opts:["Insert Tab → Table","Home Tab → Styles","References Tab → Table of Contents","View Tab → Navigation Pane"], ans:2, diff:"easy" },
-
-  { id:108, section:"MS Word", topic:"Table of Contents",
-    q:"A Table of Contents in Word is built automatically from:",
-    opts:["Bold text in the document","Heading styles (Heading 1, 2, 3)","Text in the header","Bulleted lists"], ans:1, diff:"medium" },
-
-  { id:109, section:"MS Word", topic:"Table of Contents",
-    q:"To UPDATE a Table of Contents after editing the document, you:",
-    opts:["Delete and reinsert it","Right-click the TOC → Update Field","Press Ctrl + U","Go to Insert → Update"], ans:1, diff:"medium" },
-
-  
-  { id:110, section:"MS Word", topic:"Footnotes & Endnotes",
-    q:"A Footnote in MS Word appears:",
-    opts:["At the end of the document","At the top of the page","At the bottom of the same page where it is referenced","In the header area"], ans:2, diff:"medium" },
-
-  { id:111, section:"MS Word", topic:"Footnotes & Endnotes",
-    q:"An Endnote in MS Word appears:",
-    opts:["At the bottom of each page","At the top of the page","At the beginning of the document","At the end of the entire document"], ans:3, diff:"medium" },
-
-  { id:112, section:"MS Word", topic:"Footnotes & Endnotes",
-    q:"To insert a Footnote in MS Word, you go to:",
-    opts:["Insert tab → Footnote","Home tab → Footnote","References tab → Insert Footnote","Layout tab → Footnote"], ans:2, diff:"medium" },
-
-  
-  { id:113, section:"MS Excel", topic:"Excel Structure",
-    q:"What is Microsoft Excel primarily used for?",
-    opts:["Creating presentations","Editing photos","Storing data and performing calculations in spreadsheets","Writing long documents"], ans:2, diff:"easy" },
-
-  { id:114, section:"MS Excel", topic:"Excel Structure",
-    q:"In Excel, a WORKBOOK is:",
-    opts:["A single row of data","A single sheet inside a file","The entire Excel file (.xlsx)","A single cell"], ans:2, diff:"easy" },
-
-  { id:115, section:"MS Excel", topic:"Excel Structure",
-    q:"In Excel, ROWS run:",
-    opts:["Vertically (up and down)","Horizontally (left to right)","Diagonally","In circles"], ans:1, diff:"easy" },
-
-  { id:116, section:"MS Excel", topic:"Excel Structure",
-    q:"In Excel, COLUMNS are labeled with:",
-    opts:["Numbers (1, 2, 3...)","Letters (A, B, C...)","Roman numerals (I, II, III...)","Symbols"], ans:1, diff:"easy" },
-
-  { id:117, section:"MS Excel", topic:"Excel Structure",
-    q:"Which cell reference refers to column B, row 3?",
-    opts:["3B","B-3","B3","3-B"], ans:2, diff:"easy" },
-
-  { id:118, section:"MS Excel", topic:"Excel Structure",
-    q:"To move to the next cell BELOW in Excel after typing, you press:",
-    opts:["Tab","Shift + Enter","Enter","Arrow Right"], ans:2, diff:"easy" },
-
-  { id:119, section:"MS Excel", topic:"Excel Structure",
-    q:"To move to the next cell to the RIGHT in Excel, you press:",
-    opts:["Enter","Tab","Backspace","Shift + Tab"], ans:1, diff:"easy" },
-
-  
-  { id:120, section:"MS Excel", topic:"AutoFill",
-    q:"The AutoFill feature in Excel is activated using the:",
-    opts:["Double-click on any cell","Fill Handle — small square at bottom-right of a cell","Ctrl + A shortcut","Insert tab → AutoFill"], ans:1, diff:"easy" },
-
-  { id:121, section:"MS Excel", topic:"AutoFill",
-    q:"The AutoFill feature in Excel can automatically continue:",
-    opts:["Only numeric sequences (1, 2, 3…)","Only date sequences","Numbers, dates, days, months, text+numbers, and formulas","Only text patterns"], ans:2, diff:"medium" },
-
-  { id:122, section:"MS Excel", topic:"AutoFill",
-    q:"If you type 'Student 1' and 'Student 2' and use AutoFill, Excel will continue with:",
-    opts:["Student A, Student B","Student 3, Student 4","Student One, Student Two","It cannot AutoFill text"], ans:1, diff:"medium" },
-
-  { id:123, section:"MS Excel", topic:"AutoFill",
-    q:"If you type 'Monday' in a cell and use AutoFill by dragging down, Excel will:",
-    opts:["Repeat 'Monday' in every cell","Continue with Tuesday, Wednesday, Thursday…","Show an error","Convert it to a number"], ans:1, diff:"easy" },
-
-  
-  { id:124, section:"MS Excel", topic:"Charts",
-    q:"To insert a Chart in Excel, you go to:",
-    opts:["Home tab → Charts","Layout tab → Charts","Insert tab → Charts group","Data tab → Charts"], ans:2, diff:"easy" },
-
-  { id:125, section:"MS Excel", topic:"Charts",
-    q:"Which chart type is best for comparing values across categories?",
-    opts:["Pie Chart","Line Chart","Column Chart / Bar Chart","Scatter Chart"], ans:2, diff:"medium" },
-
-  { id:126, section:"MS Excel", topic:"Charts",
-    q:"To rename a chart title in Excel, you:",
-    opts:["Go to Insert → Chart Title","Double-click the chart title and type","Use Ctrl + T","Go to Home → Chart Title"], ans:1, diff:"easy" },
-
-  { id:127, section:"MS Excel", topic:"Charts",
-    q:"Charts in Excel help to:",
-    opts:["Store more data","Visualize data and see trends quickly","Print documents faster","Connect to the internet"], ans:1, diff:"easy" },
-
-  
-  { id:128, section:"MS Excel", topic:"Number Formatting",
-    q:"In Excel, applying Currency format to the number 500 displays it as:",
-    opts:["500%","$500.00","500.00","5.00"], ans:1, diff:"easy" },
-
-  { id:129, section:"MS Excel", topic:"Number Formatting",
-    q:"In Excel, applying Percentage format to 0.75 displays it as:",
-    opts:["0.75%","7.5%","75%","750%"], ans:2, diff:"medium" },
-
-  { id:130, section:"MS Excel", topic:"Number Formatting",
-    q:"The Number Section in Excel is found in the:",
-    opts:["Insert Tab","Data Tab","Home Tab","View Tab"], ans:2, diff:"easy" },
-
-  { id:131, section:"MS Excel", topic:"Number Formatting",
-    q:"'Increase Decimal' in Excel changes 5.2 to:",
-    opts:["5","52","5.20","52.0"], ans:2, diff:"medium" },
-
-  
-  { id:132, section:"MS Excel", topic:"Conditional Formatting",
-    q:"Conditional Formatting in Excel automatically:",
-    opts:["Sorts data in order","Changes cell color or format based on rules you set","Creates pivot tables","Freezes the top row"], ans:1, diff:"easy" },
-
-  { id:133, section:"MS Excel", topic:"Conditional Formatting",
-    q:"To apply Conditional Formatting, you go to:",
-    opts:["Insert tab → Conditional Formatting","Data tab → Conditional Formatting","Home tab → Conditional Formatting","View tab → Conditional Formatting"], ans:2, diff:"easy" },
-
-  { id:134, section:"MS Excel", topic:"Conditional Formatting",
-    q:"You want cells with marks > 80 to turn Green. This is done using:",
-    opts:["Data Validation","AutoFill","Conditional Formatting → Highlight Cell Rules → Greater Than","Sort & Filter"], ans:2, diff:"medium" },
-
-  
-  { id:135, section:"MS Excel", topic:"Data Validation",
-    q:"Data Validation in Excel is mainly used to:",
-    opts:["Format numbers as currency","Create drop-down lists and control what users can enter in cells","Sort and filter data automatically","Merge multiple cells together"], ans:1, diff:"medium" },
-
-  { id:136, section:"MS Excel", topic:"Data Validation",
-    q:"Which Excel feature allows you to create a drop-down list in a cell?",
-    opts:["AutoFill","Conditional Formatting","Data Validation","Pivot Table"], ans:2, diff:"easy" },
-
-  { id:137, section:"MS Excel", topic:"Data Validation",
-    q:"To add Data Validation, you go to:",
-    opts:["Home tab → Data Validation","Insert tab → Data Validation","Data tab → Data Validation → List","View tab → Data Validation"], ans:2, diff:"medium" },
-
-  
-  { id:138, section:"MS Excel", topic:"Freeze Panes",
-    q:"Freeze Panes in Excel is used to:",
-    opts:["Protect cells from editing","Keep rows or columns visible while scrolling","Change cell background color","Create a chart"], ans:1, diff:"easy" },
-
-  { id:139, section:"MS Excel", topic:"Freeze Panes",
-    q:"To Freeze Panes in Excel, you go to:",
-    opts:["Home tab → Freeze Panes","Insert tab → Freeze Panes","View tab → Freeze Panes","Data tab → Freeze Panes"], ans:2, diff:"easy" },
-
-  { id:140, section:"MS Excel", topic:"Freeze Panes",
-    q:"Freeze Panes is especially useful when:",
-    opts:["You have a very small spreadsheet","You have a large spreadsheet and want headers to stay visible","You want to add a chart","You want to apply conditional formatting"], ans:1, diff:"medium" },
-
-  
-  { id:141, section:"MS Excel", topic:"Formulas",
-    q:"Which Excel formula calculates the SUM of cells A1 to A10?",
-    opts:["=ADD(A1:A10)","=TOTAL(A1:A10)","=SUM(A1:A10)","=PLUS(A1:A10)"], ans:2, diff:"easy" },
-
-  { id:142, section:"MS Excel", topic:"Formulas",
-    q:"Which Excel formula calculates the AVERAGE of cells B1 to B10?",
-    opts:["=MEAN(B1:B10)","=AVERAGE(B1:B10)","=AVG(B1:B10)","=MIDDLE(B1:B10)"], ans:1, diff:"easy" },
-
-  { id:143, section:"MS Excel", topic:"Formulas",
-    q:"Which Excel formula finds the HIGHEST value in a range?",
-    opts:["=HIGH(A1:A10)","=TOP(A1:A10)","=LARGE(A1:A10)","=MAX(A1:A10)"], ans:3, diff:"easy" },
-
-  { id:144, section:"MS Excel", topic:"Formulas",
-    q:"Which Excel formula finds the LOWEST value in a range?",
-    opts:["=LOW(A1:A10)","=MIN(A1:A10)","=BOTTOM(A1:A10)","=SMALL(A1:A10)"], ans:1, diff:"easy" },
-
-  { id:145, section:"MS Excel", topic:"Formulas",
-    q:"The formula =IF(A1>50, \"Pass\", \"Fail\") means:",
-    opts:["Always write Pass","If A1 is greater than 50, write Pass; otherwise write Fail","If A1 is less than 50, write Pass","Always write Fail"], ans:1, diff:"medium" },
-
-  { id:146, section:"MS Excel", topic:"Formulas",
-    q:"The formula =TODAY() in Excel returns:",
-    opts:["Yesterday's date","The time right now","Today's current date","The year only"], ans:2, diff:"easy" },
-
-  { id:147, section:"MS Excel", topic:"Formulas",
-    q:"=ROUND(A1, 2) in Excel will:",
-    opts:["Multiply A1 by 2","Round A1 to 2 decimal places","Divide A1 by 2","Show A1 as a percentage"], ans:1, diff:"medium" },
-
-  
-  { id:148, section:"MS Excel", topic:"AND / OR Functions",
-    q:"The AND function in Excel returns TRUE only when:",
-    opts:["Any single condition among all is true","ALL specified conditions are true simultaneously","No conditions are true","At least one condition is false"], ans:1, diff:"medium" },
-
-  { id:149, section:"MS Excel", topic:"AND / OR Functions",
-    q:"The OR function in Excel returns TRUE when:",
-    opts:["ALL conditions are true","NO conditions are true","AT LEAST ONE condition is true","Exactly two conditions are true"], ans:2, diff:"medium" },
-
-  { id:150, section:"MS Excel", topic:"AND / OR Functions",
-    q:"The formula =IF(AND(A1>50, B1>50), \"Pass\", \"Fail\") means:",
-    opts:["Pass if A1 or B1 is above 50","Pass ONLY if BOTH A1 AND B1 are above 50","Fail if both are above 50","Pass if A1 is exactly 50"], ans:1, diff:"hard" },
-
-  { id:151, section:"MS Excel", topic:"AND / OR Functions",
-    q:"The formula =IF(OR(A1>90, B1>90), \"Top\", \"Normal\") means:",
-    opts:["Top only if BOTH are above 90","Top if EITHER A1 OR B1 is above 90","Normal if both are above 90","Top only if A1 is exactly 90"], ans:1, diff:"hard" },
-
-  
-  { id:152, section:"MS Excel", topic:"Pivot Tables",
-    q:"A Pivot Table in Microsoft Excel is primarily used to:",
-    opts:["Draw and customize charts","Validate and restrict data entry","Summarize, analyze, and group large datasets quickly","Insert and format images"], ans:2, diff:"medium" },
-
-  { id:153, section:"MS Excel", topic:"Pivot Tables",
-    q:"To insert a Pivot Table in Excel, you go to:",
-    opts:["Home tab → PivotTable","Data tab → PivotTable","Insert tab → PivotTable","View tab → PivotTable"], ans:2, diff:"easy" },
-
-  { id:154, section:"MS Excel", topic:"Pivot Tables",
-    q:"In a Pivot Table, the ROW field determines:",
-    opts:["Which column to total","What categories to group data by","The chart type","The background color"], ans:1, diff:"hard" },
-
-  
-  { id:155, section:"MS Excel", topic:"Cell Formatting",
-    q:"'Merge & Center' in Excel is used to:",
-    opts:["Split a cell into multiple cells","Combine multiple cells into one and center the text","Format numbers as currency","Delete cell contents"], ans:1, diff:"easy" },
-
-  { id:156, section:"MS Excel", topic:"Cell Formatting",
-    q:"'Wrap Text' in Excel makes:",
-    opts:["Long text overflow to the next column","Long text visible within a single cell by wrapping to multiple lines","The text rotate sideways","The text shrink in size"], ans:1, diff:"easy" },
-
-  { id:157, section:"MS Excel", topic:"Cell Formatting",
-    q:"To apply ALL BORDERS to a data table in Excel, you:",
-    opts:["Go to Insert → Borders","Use Home tab → Font group → Borders → All Borders","Double-click each cell","Use Ctrl + B"], ans:1, diff:"medium" },
-
-  
-  { id:158, section:"MS Excel", topic:"Protect Sheet",
-    q:"Protect Sheet in Excel is used to:",
-    opts:["Create a backup of the file","Add a watermark to the sheet","Prevent users from editing cells without a password","Format cells automatically"], ans:2, diff:"medium" },
-
-  { id:159, section:"MS Excel", topic:"Protect Sheet",
-    q:"To Protect a Sheet in Excel, you go to:",
-    opts:["Home tab → Protect Sheet","Insert tab → Protect Sheet","Review tab → Protect Sheet","Data tab → Protect Sheet"], ans:2, diff:"medium" },
-
-  
-  { id:160, section:"MS Excel", topic:"Data Tools",
-    q:"Text to Columns in Excel is used to:",
-    opts:["Merge multiple columns into one","Split text from one column into multiple columns","Sort data alphabetically","Apply conditional formatting"], ans:1, diff:"medium" },
-
-  { id:161, section:"MS Excel", topic:"Data Tools",
-    q:"Remove Duplicates in Excel is found in the:",
-    opts:["Home tab","Insert tab","Data tab","View tab"], ans:2, diff:"easy" },
-
-  { id:162, section:"MS Excel", topic:"Data Tools",
-    q:"Spell Check in Excel is found under which tab, and what is its keyboard shortcut?",
-    opts:["Home tab / F5","Insert tab / F6","Review tab / F7","View tab / F8"], ans:2, diff:"medium" },
+  { id:8, section:"Software", topic:"Operating System",
+    q:"Windows Server and Unix are examples of which type of Operating System?",
+    opts:["Single-User OS","Multi-User OS","Embedded OS","Mobile OS"], ans:1, diff:"medium" },
+
+  // ============================================================
+  // SECTION: Software Types (Class 14)
+  // ============================================================
+
+  { id:9, section:"Software", topic:"Types of Software",
+    q:"Which category of software manages hardware resources and provides a platform for other software to run?",
+    opts:["Application Software","Utility Software","System Software","Firmware"], ans:2, diff:"easy" },
+
+  { id:10, section:"Software", topic:"Types of Software",
+    q:"WinRAR, CCleaner, and Disk Defragmenter are all examples of:",
+    opts:["System Software","Application Software","Utility Software","Malware"], ans:2, diff:"medium" },
+
+  { id:11, section:"Software", topic:"Types of Software",
+    q:"Which statement about software is correct?",
+    opts:["Software has physical form and can be touched","Software is a set of instructions with no physical form — it exists only as code","Software and hardware are the same thing","Software can only run on one operating system"], ans:1, diff:"easy" },
+
+  { id:12, section:"Software", topic:"Types of Software",
+    q:"The first software ever written is credited to which person, in the year 1843?",
+    opts:["Alan Turing","Bill Gates","Ada Lovelace","Charles Babbage"], ans:2, diff:"hard" },
+
+  // ============================================================
+  // SECTION: Programming Languages (Class 15)
+  // ============================================================
+
+  { id:13, section:"Software", topic:"Programming Languages",
+    q:"Which type of programming language is written closest to binary (0s and 1s) and is extremely fast but difficult to read?",
+    opts:["High-Level Language","Scripting Language","Low-Level Language","Object-Oriented Language"], ans:2, diff:"medium" },
+
+  { id:14, section:"Software", topic:"Programming Languages",
+    q:"A Compiler differs from an Interpreter in that a Compiler:",
+    opts:["Translates code line by line in real time","Shows errors immediately as each line runs","Translates the ENTIRE code at once and creates an executable file","Only works with Python and JavaScript"], ans:2, diff:"hard" },
+
+  { id:15, section:"Software", topic:"Programming Languages",
+    q:"Python is classified as which type of language?",
+    opts:["Low-Level, Compiled","High-Level, Interpreted","Mid-Level, Compiled","Machine Code, Assembled"], ans:1, diff:"medium" },
+
+  { id:16, section:"Software", topic:"Programming Languages",
+    q:"Java's famous motto 'Write Once, Run Anywhere' is possible because it compiles to:",
+    opts:["Machine code specific to each OS","An executable .exe file","Bytecode interpreted by the JVM","Assembly language"], ans:2, diff:"hard" },
+
+  { id:17, section:"Software", topic:"Programming Languages",
+    q:"C++ is primarily used to build which of the following types of programs?",
+    opts:["Android mobile apps","AI and data science tools","Video games, operating systems, and browsers","Simple web pages"], ans:2, diff:"medium" },
+
+  { id:18, section:"Software", topic:"Programming Languages",
+    q:"An Interpreter shows errors:",
+    opts:["Only after the entire program is scanned","Never — it compiles without showing errors","Immediately, as soon as a problematic line is reached","Only after creating an executable file"], ans:2, diff:"hard" },
+
+  // ============================================================
+  // SECTION: Viruses & Antivirus (Class 16)
+  // ============================================================
+
+  { id:19, section:"Software", topic:"Viruses & Antivirus",
+    q:"Which type of virus infects executable files (.exe, .com) and activates when the infected program is run?",
+    opts:["Boot Sector Virus","Macro Virus","File Infector Virus","Worm"], ans:2, diff:"medium" },
+
+  { id:20, section:"Software", topic:"Viruses & Antivirus",
+    q:"A Worm is different from a regular virus because it:",
+    opts:["Attaches itself to .exe files","Requires a host file to spread","Replicates itself and spreads across networks WITHOUT needing a host file","Only infects boot sectors"], ans:2, diff:"hard" },
+
+  { id:21, section:"Software", topic:"Viruses & Antivirus",
+    q:"Ransomware attacks a computer by:",
+    opts:["Deleting the operating system","Encrypting all the user's files and demanding payment for the decryption key","Slowing down the CPU by using all RAM","Displaying pop-up advertisements on the browser"], ans:1, diff:"medium" },
+
+  { id:22, section:"Software", topic:"Viruses & Antivirus",
+    q:"Which antivirus method detects NEW, previously unknown threats by analysing suspicious behaviour instead of matching known signatures?",
+    opts:["Signature-Based Scanning","Quarantine","Heuristic Analysis","Real-Time Protection"], ans:2, diff:"hard" },
+
+  { id:23, section:"Software", topic:"Viruses & Antivirus",
+    q:"Sandboxing in antivirus software means:",
+    opts:["Deleting all suspicious files permanently","Running a suspicious file in an isolated virtual environment to observe its behaviour","Blocking all internet access","Comparing a file against a known virus signature database"], ans:1, diff:"hard" },
+
+  { id:24, section:"Software", topic:"Viruses & Antivirus",
+    q:"A Boot Sector virus is particularly dangerous because it:",
+    opts:["Spreads only through email attachments","Loads before the operating system even starts, making it extremely hard to detect","Only affects Word and Excel macros","Requires the user to double-click a file to activate"], ans:1, diff:"hard" },
+
+  { id:25, section:"Software", topic:"Viruses & Antivirus",
+    q:"A Trojan Horse differs from other malware because it:",
+    opts:["Self-replicates across networks automatically","Disguises itself as a legitimate useful program to trick the user into installing it","Infects the boot sector of the hard drive","Only spreads through email worms"], ans:1, diff:"medium" },
+
+  // ============================================================
+  // SECTION: Cloud Computing (Class 17)
+  // ============================================================
+
+  { id:26, section:"Software", topic:"Cloud Computing",
+    q:"Which type of cloud is dedicated exclusively to a single organization and is never shared with others?",
+    opts:["Public Cloud","Hybrid Cloud","Private Cloud","Community Cloud"], ans:2, diff:"medium" },
+
+  { id:27, section:"Software", topic:"Cloud Computing",
+    q:"A Hybrid Cloud is best described as:",
+    opts:["A cloud used only for gaming","A combination of public and private clouds connected together for flexibility","A cloud owned by many governments","Only used by universities"], ans:1, diff:"medium" },
+
+  { id:28, section:"Software", topic:"Cloud Computing",
+    q:"Which cloud storage service is fully integrated into Windows 10 and 11 and appears as a folder in File Explorer?",
+    opts:["Google Drive","iCloud","Dropbox","Microsoft OneDrive"], ans:3, diff:"easy" },
+
+  { id:29, section:"Software", topic:"Cloud Computing",
+    q:"In cloud computing, what happens immediately after you send a request via your browser or app?",
+    opts:["Data is saved to your local hard drive first","Your data travels over the internet to a remote data center for processing","The BIOS runs a POST check","Your RAM is cleared to free memory"], ans:1, diff:"medium" },
+
+  // ============================================================
+  // SECTION: Cybersecurity (Class 18)
+  // ============================================================
+
+  { id:30, section:"Software", topic:"Cybersecurity",
+    q:"Which cyber threat involves flooding a website with enormous fake traffic to make it unavailable to real users?",
+    opts:["Phishing","Spyware","DoS (Denial of Service) Attack","Social Engineering"], ans:2, diff:"medium" },
+
+  { id:31, section:"Software", topic:"Cybersecurity",
+    q:"'Spear Phishing' differs from regular Phishing in that it:",
+    opts:["Attacks through infected USB drives","Is a targeted attack aimed at one specific person","Uses worms to self-replicate","Only works on mobile devices"], ans:1, diff:"hard" },
+
+  { id:32, section:"Software", topic:"Cybersecurity",
+    q:"Two-Factor Authentication (2FA) requires something you KNOW and something you:",
+    opts:["See on screen","Have (like a phone for a code) and potentially something you ARE (biometric)","Download from the internet","Type in the URL bar"], ans:1, diff:"medium" },
+
+  { id:33, section:"Software", topic:"Cybersecurity",
+    q:"'Baiting' in social engineering involves:",
+    opts:["Sending fake emails pretending to be a bank","Leaving a USB drive somewhere hoping someone plugs it in out of curiosity","Following an employee through a secure door","Flooding a server with traffic"], ans:1, diff:"hard" },
+
+  { id:34, section:"Software", topic:"Cybersecurity",
+    q:"A DDoS attack is more powerful than a DoS attack because it uses:",
+    opts:["A faster internet connection","A single very powerful server","Thousands of hacked computers (a botnet) all attacking at once","Ransomware to encrypt the target first"], ans:2, diff:"hard" },
+
+  // ============================================================
+  // SECTION: AI Basics (Class 19)
+  // ============================================================
+
+  { id:35, section:"Software", topic:"Artificial Intelligence",
+    q:"Artificial Intelligence is best defined as:",
+    opts:["Hardware that performs calculations faster than humans","Software that enables machines to think, learn, and make decisions like humans","The internet connected to physical robots","A type of operating system for servers"], ans:1, diff:"easy" },
+
+  { id:36, section:"Software", topic:"Artificial Intelligence",
+    q:"Which of the following is NOT a real-world example of AI taught in class?",
+    opts:["Siri","ChatGPT","Google Assistant","Microsoft Excel AutoFill"], ans:3, diff:"medium" },
+
+  { id:37, section:"Software", topic:"Artificial Intelligence",
+    q:"In the AI process cycle, after data is input and processed by the model, what does the AI produce?",
+    opts:["A new hardware component","A smart response or prediction (output)","A compiled executable file","A new operating system"], ans:1, diff:"medium" },
+
+  // ============================================================
+  // SECTION: Internet & WWW (Class 20)
+  // ============================================================
+
+  { id:38, section:"Software", topic:"Internet & WWW",
+    q:"The World Wide Web (WWW) is:",
+    opts:["The same as the Internet","A collection of web pages linked together that runs ON TOP of the internet","The physical cables connecting computers worldwide","An email protocol"], ans:1, diff:"medium" },
+
+  { id:39, section:"Software", topic:"Internet & WWW",
+    q:"What is the role of DNS in internet browsing?",
+    opts:["It encrypts your data for security","It converts domain names (like google.com) into IP addresses","It stores web pages on your computer","It provides your computer's MAC address"], ans:1, diff:"medium" },
+
+  { id:40, section:"Software", topic:"Internet & WWW",
+    q:"In Google Search, what is the 'Indexing' stage?",
+    opts:["Google bots visit every webpage and read its content","Google saves and organizes all crawled pages in a giant database called the Search Index","Google picks the most relevant and trusted pages to display","Google encrypts search results for security"], ans:1, diff:"hard" },
+
+  // ============================================================
+  // SECTION: Input & Output Devices (Class 11)
+  // ============================================================
+
+  { id:41, section:"Hardware", topic:"Input & Output Devices",
+    q:"DPI (Dots Per Inch) in the context of a mouse refers to:",
+    opts:["The print quality of a connected printer","The number of pixels the cursor moves per inch of physical movement — higher DPI = faster cursor","The resolution of the monitor connected","The speed of the USB connection"], ans:1, diff:"hard" },
+
+  { id:42, section:"Hardware", topic:"Input & Output Devices",
+    q:"Which printer type is best for high-speed, cost-effective text printing in an office environment?",
+    opts:["Inkjet Printer","Dot Matrix Printer","3D Printer","Laser Printer"], ans:3, diff:"medium" },
+
+  { id:43, section:"Hardware", topic:"Input & Output Devices",
+    q:"A monitor's 'refresh rate' measured in Hertz (Hz) refers to:",
+    opts:["How bright the screen is","How many times per second the screen updates/redraws the image","The resolution of the display","The power consumption of the monitor"], ans:1, diff:"medium" },
+
+  { id:44, section:"Hardware", topic:"Input & Output Devices",
+    q:"Which input device type converts physical documents or photos into digital files for computer use?",
+    opts:["Webcam","Microphone","Scanner","Touchpad"], ans:2, diff:"easy" },
+
+  { id:45, section:"Hardware", topic:"Input & Output Devices",
+    q:"What is the key difference between Input and Output devices in terms of data direction?",
+    opts:["Input devices receive from computer, output sends to computer","Both input and output devices send data to the computer","Input sends data TO the computer, output receives data FROM the computer","There is no difference — they both process data"], ans:2, diff:"easy" },
+
+  { id:46, section:"Hardware", topic:"Input & Output Devices",
+    q:"A Dot Matrix printer produces output by:",
+    opts:["Spraying liquid ink cartridges onto paper","Using pins to strike an ink ribbon against paper, producing characters","Using laser beams and toner powder","Melting plastic filament layer by layer"], ans:1, diff:"hard" },
+
+  // ============================================================
+  // SECTION: PSU (Class 12)
+  // ============================================================
+
+  { id:47, section:"Hardware", topic:"Power Supply Unit",
+    q:"A PSU (Power Supply Unit) converts which type of current from the wall outlet into usable power for computer components?",
+    opts:["DC to AC","AC (Alternating Current) to DC (Direct Current)","High DC to Low DC","AC to AC at a lower voltage"], ans:1, diff:"medium" },
+
+  { id:48, section:"Hardware", topic:"Power Supply Unit",
+    q:"The 24-pin ATX connector on a PSU is used to supply power to:",
+    opts:["The graphics card (GPU)","The main motherboard","Individual SSD drives","CPU cooling fans only"], ans:1, diff:"medium" },
+
+  { id:49, section:"Hardware", topic:"Power Supply Unit",
+    q:"In a Fully Modular PSU, which cables are attached by default?",
+    opts:["All cables are permanently attached","Only the 24-pin and CPU cables are fixed; others are detachable","No cables — all are detachable and added as needed","Only PCIe cables are fixed"], ans:2, diff:"hard" },
+
+  { id:50, section:"Hardware", topic:"Power Supply Unit",
+    q:"The 80+ efficiency rating on a PSU indicates:",
+    opts:["The PSU can deliver exactly 80W of power","How much of the power drawn from the wall actually reaches the computer's components (higher = less wasted as heat)","The PSU has 80 internal components","The PSU supports up to 80 connected devices"], ans:1, diff:"hard" },
+
+  { id:51, section:"Hardware", topic:"Power Supply Unit",
+    q:"Which internal PSU component converts AC power into unsmoothed DC power (raw DC)?",
+    opts:["Transformer","Filter Capacitors","Rectifier","Voltage Regulator"], ans:2, diff:"hard" },
+
+  { id:52, section:"Hardware", topic:"Power Supply Unit",
+    q:"A high-end gaming PC requiring a GPU, fast CPU, and multiple drives would typically need a PSU of at least:",
+    opts:["150–200W","300–400W","750–850W","50–100W"], ans:2, diff:"medium" },
+
+  // ============================================================
+  // SECTION: GPU (Class 13)
+  // ============================================================
+
+  { id:53, section:"Hardware", topic:"GPU",
+    q:"A dedicated GPU differs from an integrated GPU primarily because it has:",
+    opts:["Less power consumption and shares system RAM","Its own separate VRAM and delivers higher performance for demanding tasks","A built-in CPU inside it","Lower heat output and cheaper production cost"], ans:1, diff:"medium" },
+
+  { id:54, section:"Hardware", topic:"GPU",
+    q:"Why is a GPU better suited than a CPU for rendering graphics?",
+    opts:["A GPU has a higher clock speed than a CPU","A GPU has thousands of cores optimized for parallel processing of many small tasks simultaneously","A GPU is physically larger than a CPU","A GPU directly controls the RAM modules"], ans:1, diff:"hard" },
+
+  { id:55, section:"Hardware", topic:"GPU",
+    q:"Which of the following is an example of a PROFESSIONAL dedicated GPU used in AI and data centres?",
+    opts:["Intel UHD Graphics","AMD Radeon Vega","NVIDIA A100 / H100","Apple M-series GPU"], ans:2, diff:"hard" },
+
+  { id:56, section:"Hardware", topic:"GPU",
+    q:"An integrated GPU is commonly found in which type of device?",
+    opts:["High-end gaming desktops","AI workstations","Laptops and budget PCs — it is built into the CPU and shares system RAM","Dedicated render farms"], ans:2, diff:"easy" },
+
+  { id:57, section:"Hardware", topic:"GPU",
+    q:"Beyond gaming, GPUs are now also heavily used for:",
+    opts:["Managing file systems and storage","AI and machine learning, scientific simulations, and cryptocurrency mining","Replacing RAM in budget systems","Running BIOS firmware"], ans:1, diff:"medium" },
+
+  // ============================================================
+  // SECTION: MS WORD — Mail Merge (Class 11)
+  // ============================================================
+
+  { id:58, section:"MS Word", topic:"Mail Merge",
+    q:"In Mail Merge, what is the 'Main Document'?",
+    opts:["The Excel file with the recipients' data","The template letter or document with merge field placeholders","The final merged output file","The Outlook contacts list"], ans:1, diff:"medium" },
+
+  { id:59, section:"MS Word", topic:"Mail Merge",
+    q:"In your Excel data source for Mail Merge, what MUST the first row always contain?",
+    opts:["Blank cells to separate header from data","Column headers that become the merge field names (e.g., FirstName, LastName)","The total number of recipients","Page break indicators"], ans:1, diff:"medium" },
+
+  { id:60, section:"MS Word", topic:"Mail Merge",
+    q:"To insert a personalized field (like a recipient's name) into your Mail Merge letter, you use:",
+    opts:["Insert → Table","Mailings → Insert Merge Field","References → Insert Citation","Review → New Comment"], ans:1, diff:"easy" },
+
+  { id:61, section:"MS Word", topic:"Mail Merge",
+    q:"When you choose 'Finish & Merge → Edit Individual Documents', the result is:",
+    opts:["The printer starts printing immediately","All merged letters are created as a single new Word file that can be saved and printed later","Outlook sends emails to all recipients","Only the first letter is generated"], ans:1, diff:"hard" },
+
+  { id:62, section:"MS Word", topic:"Mail Merge",
+    q:"Which of the following would BREAK a Mail Merge data source in Excel?",
+    opts:["Having column headers in the first row","Using short header names without spaces","Having blank rows or merged cells in the Excel data","Using a separate Excel sheet for data"], ans:2, diff:"hard" },
+
+  // ============================================================
+  // SECTION: MS WORD — Track Changes & Comments (Class 12)
+  // ============================================================
+
+  { id:63, section:"MS Word", topic:"Track Changes",
+    q:"The keyboard shortcut to toggle Track Changes ON or OFF is:",
+    opts:["Ctrl + T","Ctrl + Shift + E","Ctrl + Alt + T","F7"], ans:1, diff:"medium" },
+
+  { id:64, section:"MS Word", topic:"Track Changes",
+    q:"When you 'Reject All Changes' in Track Changes, what happens?",
+    opts:["All tracked changes are permanently applied to the document","All tracked edits are undone and the document reverts to its original text","All comments are deleted","The document is saved automatically"], ans:1, diff:"medium" },
+
+  { id:65, section:"MS Word", topic:"Track Changes",
+    q:"In MS Word, 'Resolving' a comment means:",
+    opts:["Permanently deleting the comment and its text","Marking the comment as addressed without deleting it — it is greyed out","Converting the comment into a footnote","Accepting all tracked changes in the document"], ans:1, diff:"hard" },
+
+  { id:66, section:"MS Word", topic:"Track Changes",
+    q:"Track Changes is especially useful in which of the following scenarios?",
+    opts:["Formatting a poster with colors and shapes","Legal teams reviewing contract documents where every change must be recorded","Inserting images and charts into presentations","Running a Spell Check on a short essay"], ans:1, diff:"medium" },
+
+  // ============================================================
+  // SECTION: MS WORD — Macros & AutoText (Class 13)
+  // ============================================================
+
+  { id:67, section:"MS Word", topic:"Macros & AutoText",
+    q:"Where are Word Macros saved by default for global use across all documents?",
+    opts:["On the Desktop as a .exe file","In the Normal.dotm template file","In the Windows Registry","In a dedicated .macro file in the Word folder"], ans:1, diff:"hard" },
+
+  { id:68, section:"MS Word", topic:"Macros & AutoText",
+    q:"To insert a saved AutoText entry, you type its name and then press:",
+    opts:["Enter","Ctrl + V","F3","Tab"], ans:2, diff:"medium" },
+
+  { id:69, section:"MS Word", topic:"Macros & AutoText",
+    q:"To save text as an AutoText entry, you go to:",
+    opts:["File → Save As → AutoText","Insert → Quick Parts → AutoText → Save Selection to AutoText Gallery","Review → New Comment → Save as AutoText","Home → Styles → New AutoText Style"], ans:1, diff:"hard" },
+
+  { id:70, section:"MS Word", topic:"Macros & AutoText",
+    q:"A Macro in MS Word is best described as:",
+    opts:["A type of watermark placed behind document text","A recorded sequence of actions that can be replayed with one click or shortcut","A citation style for referencing sources","A type of section break between document pages"], ans:1, diff:"easy" },
+
+  // ============================================================
+  // SECTION: MS WORD — Digital Signatures & Document Protection (Class 14)
+  // ============================================================
+
+  { id:71, section:"MS Word", topic:"Document Protection",
+    q:"When a document is 'Marked as Final' in MS Word, it becomes:",
+    opts:["Fully encrypted with a password — unreadable without the key","Read-only — editing is discouraged but the document is NOT password locked","Permanently deleted from the recycle bin","Converted automatically to a PDF"], ans:1, diff:"hard" },
+
+  { id:72, section:"MS Word", topic:"Document Protection",
+    q:"To restrict who can edit a document in MS Word, you use:",
+    opts:["Insert → Signature Line → Restrict Access","Review → Restrict Editing → Set limits and click Yes, Start Enforcing Protection","File → Save As → Read Only","Design → Page Color → Lock Page"], ans:1, diff:"medium" },
+
+  { id:73, section:"MS Word", topic:"Document Protection",
+    q:"A Digital Signature in MS Word serves which purpose?",
+    opts:["It inserts a decorative handwritten signature image","It verifies the identity of the signer and confirms the document has not been tampered with after signing","It automatically formats the document for legal use","It locks the document from printing"], ans:1, diff:"medium" },
+
+  { id:74, section:"MS Word", topic:"Document Protection",
+    q:"Password Protection in MS Word is found under:",
+    opts:["Review → Protect Document → Encrypt with Password","File → Info → Protect Document → Encrypt with Password","Design → Page Background → Set Password","View → Slide Master → Add Password"], ans:1, diff:"medium" },
+
+  // ============================================================
+  // SECTION: MS WORD — Citations & Bibliography (Class 15)
+  // ============================================================
+
+  { id:75, section:"MS Word", topic:"Citations & Bibliography",
+    q:"To automatically generate a full Bibliography after adding citations, you go to:",
+    opts:["Insert → Table of Contents → Bibliography Style","References → Bibliography → Choose a style (APA, MLA, Chicago)","Review → Manage Sources → Generate List","File → Export → References"], ans:1, diff:"medium" },
+
+  { id:76, section:"MS Word", topic:"Citations & Bibliography",
+    q:"The APA citation style is most commonly used in which academic fields?",
+    opts:["History and Social Sciences","Literature, Arts and Humanities","Psychology, Education, and Sciences","Law and legal studies"], ans:2, diff:"hard" },
+
+  { id:77, section:"MS Word", topic:"Citations & Bibliography",
+    q:"What keyboard shortcut updates all citations and bibliography fields in an MS Word document?",
+    opts:["F5","F7","F9","Ctrl + U"], ans:2, diff:"hard" },
+
+  { id:78, section:"MS Word", topic:"Citations & Bibliography",
+    q:"In MS Word's citation system, the 'Master List' refers to:",
+    opts:["The list of all Heading styles in the document","A permanent store of sources saved on your computer that can be reused across any document","The table of contents generated from headings","A list of all comments and tracked changes"], ans:1, diff:"hard" },
+
+  // ============================================================
+  // SECTION: MS EXCEL — VLOOKUP (Class 11)
+  // ============================================================
+
+  { id:79, section:"MS Excel", topic:"VLOOKUP",
+    q:"In the VLOOKUP formula =VLOOKUP(A2, $B$2:$D$10, 2, FALSE), what does the '2' represent?",
+    opts:["The row number to return","The number of rows to search","The column number within the table_array to return the result from","The maximum number of matches allowed"], ans:2, diff:"medium" },
+
+  { id:80, section:"MS Excel", topic:"VLOOKUP",
+    q:"What error does VLOOKUP return when the lookup value is NOT found in the table?",
+    opts:["#REF!","#VALUE!","#N/A","#DIV/0!"], ans:2, diff:"medium" },
+
+  { id:81, section:"MS Excel", topic:"VLOOKUP",
+    q:"To prevent VLOOKUP from breaking when you copy a formula down a column, you should use $ signs on the table_array because:",
+    opts:["It makes the formula run faster","It locks the table reference as an absolute reference so it does not shift when copied","It converts the formula to an approximate match","It prevents #REF! errors from column deletions"], ans:1, diff:"hard" },
+
+  { id:82, section:"MS Excel", topic:"VLOOKUP",
+    q:"VLOOKUP can ONLY search for the lookup value in which position within the table_array?",
+    opts:["Any column in the table","The last column of the table","The first column (leftmost) of the table","A named range anywhere in the workbook"], ans:2, diff:"hard" },
+
+  // ============================================================
+  // SECTION: MS EXCEL — HLOOKUP (Class 12)
+  // ============================================================
+
+  { id:83, section:"MS Excel", topic:"HLOOKUP",
+    q:"HLOOKUP searches for a value in which part of the table?",
+    opts:["The first COLUMN (leftmost)","The last ROW","The first ROW (top row)","Any cell in the middle of the table"], ans:2, diff:"medium" },
+
+  { id:84, section:"MS Excel", topic:"HLOOKUP",
+    q:"In =HLOOKUP('Feb', A1:E3, 2, FALSE), the value '2' refers to:",
+    opts:["The second column of the table","The row number from which to return the value (Row 2 of the table)","The number of columns to search","The FALSE equivalent for exact match"], ans:1, diff:"hard" },
+
+  { id:85, section:"MS Excel", topic:"HLOOKUP",
+    q:"HLOOKUP is best suited for data arranged with:",
+    opts:["ID-based records in vertical lists","Monthly or quarterly headers across the top row","Random unsorted data","Data in a single column"], ans:1, diff:"medium" },
+
+  // ============================================================
+  // SECTION: MS EXCEL — INDEX & MATCH (Class 13)
+  // ============================================================
+
+  { id:86, section:"MS Excel", topic:"INDEX & MATCH",
+    q:"What does the MATCH function return?",
+    opts:["The actual value found in the cell","The relative position (row or column number) of a value within a range","The sum of all matching values","The number of matches found"], ans:1, diff:"medium" },
+
+  { id:87, section:"MS Excel", topic:"INDEX & MATCH",
+    q:"In =INDEX(C2:C100, MATCH('Alice', A2:A100, 0)), what is MATCH('Alice', A2:A100, 0) doing?",
+    opts:["Returning Alice's actual score from column C","Counting how many times Alice appears in column A","Finding Alice's row position in column A to pass to INDEX","Checking if Alice's name is spelled correctly"], ans:2, diff:"hard" },
+
+  { id:88, section:"MS Excel", topic:"INDEX & MATCH",
+    q:"A key advantage of INDEX+MATCH over VLOOKUP is that INDEX+MATCH can:",
+    opts:["Only work with text data","Look up values in ANY direction — left, right, up, or down — not just left-to-right","Only work on sheets with fewer than 100 rows","Automatically sort the data before searching"], ans:1, diff:"hard" },
+
+  { id:89, section:"MS Excel", topic:"INDEX & MATCH",
+    q:"When you insert a new column in the middle of a VLOOKUP table, the formula often breaks. INDEX+MATCH handles this because:",
+    opts:["It automatically updates the column index number","It references the return column by name/range rather than by number — so it works fine","It ignores newly inserted columns","It uses a dynamic array that expands automatically"], ans:1, diff:"hard" },
+
+  // ============================================================
+  // SECTION: MS EXCEL — COUNTIF, SUMIF, AVERAGEIF (Class 14)
+  // ============================================================
+
+  { id:90, section:"MS Excel", topic:"Conditional Functions",
+    q:"The SUMIF function syntax is =SUMIF(range, criteria, sum_range). What does 'sum_range' specify?",
+    opts:["The range to check the condition against","The criteria (condition) to test","The range of values to ADD UP when the condition is met","The output cell where the result appears"], ans:2, diff:"hard" },
+
+  { id:91, section:"MS Excel", topic:"Conditional Functions",
+    q:"=COUNTIF(B2:B10, 'Pass') counts:",
+    opts:["The total marks of all students who passed","How many cells in B2:B10 contain the word 'Pass'","The average of all Pass grades","The row number of the first 'Pass' entry"], ans:1, diff:"medium" },
+
+  { id:92, section:"MS Excel", topic:"Conditional Functions",
+    q:"AVERAGEIF calculates the average of values in a range but ONLY for rows where:",
+    opts:["The values are above zero","A specific condition in a criteria range is met","All cells in the row are filled","The values are text, not numbers"], ans:1, diff:"medium" },
+
+  // ============================================================
+  // SECTION: MS EXCEL — Advanced Data Validation (Class 15)
+  // ============================================================
+
+  { id:93, section:"MS Excel", topic:"Advanced Data Validation",
+    q:"In Advanced Data Validation, using =INDIRECT(B1) as the source for a dropdown creates which type of functionality?",
+    opts:["A simple list from a fixed range","A password-protected dropdown","A dependent (cascading) dropdown where options change based on another cell's value","A dropdown that only allows numbers"], ans:2, diff:"hard" },
+
+  { id:94, section:"MS Excel", topic:"Advanced Data Validation",
+    q:"The 'Stop' error alert style in Data Validation means:",
+    opts:["A warning is shown but the user can still enter the invalid data","The invalid entry is allowed but flagged in red","The entry is completely blocked — the user cannot continue until valid data is entered","The cell is locked permanently"], ans:2, diff:"hard" },
+
+  { id:95, section:"MS Excel", topic:"Advanced Data Validation",
+    q:"When creating dependent dropdown lists in Excel, why must the named range exactly match the selection in the first dropdown?",
+    opts:["For colour coding purposes only","Because INDIRECT(B1) converts the cell's text into a range name — the name must match exactly for it to find the correct list","Excel requires all named ranges to be identical","To prevent circular reference errors"], ans:1, diff:"hard" },
+
+  // ============================================================
+  // SECTION: MS POWERPOINT — Basics & Animations (Class 16–17)
+  // ============================================================
+
+  { id:96, section:"MS PowerPoint", topic:"PPT Basics",
+    q:"What is the file extension for a Microsoft PowerPoint presentation?",
+    opts:[".docx",".xlsx",".pptx",".ppsx"], ans:2, diff:"easy" },
+
+  { id:97, section:"MS PowerPoint", topic:"PPT Basics",
+    q:"In PowerPoint, the 'Notes Panel' is used for:",
+    opts:["Embedding hidden slides","Storing speaker notes that the audience does not see during the presentation","Creating slide transitions","Animating text on a slide"], ans:1, diff:"easy" },
+
+  { id:98, section:"MS PowerPoint", topic:"Animations & Transitions",
+    q:"Which animation timing option causes an animation to start AUTOMATICALLY after the previous animation finishes?",
+    opts:["On Click","With Previous","After Previous","On Load"], ans:2, diff:"medium" },
+
+  { id:99, section:"MS PowerPoint", topic:"Animations & Transitions",
+    q:"The 'Morph' transition in PowerPoint creates:",
+    opts:["A simple fade between two slides","Smooth animated movement of objects that exist on both the current and next slide","A random sequence of all available transitions","A spinning 3D cube effect"], ans:1, diff:"hard" },
+
+  { id:100, section:"MS PowerPoint", topic:"Animations & Transitions",
+    q:"To reorder the sequence of animations on a slide, you use the:",
+    opts:["Slide Master","Design tab → Variants panel","Animation Pane (View → Animation Pane) — drag items to reorder","Transitions tab → Timing group"], ans:2, diff:"medium" },
+
+  // ============================================================
+  // SECTION: MS POWERPOINT — Slide Master (Class 18)
+  // ============================================================
+
+  { id:101, section:"MS PowerPoint", topic:"Slide Master",
+    q:"The main purpose of Slide Master in PowerPoint is to:",
+    opts:["Create individual animations for each slide","Allow one change to the master to instantly update fonts, colors, and layouts on ALL slides","Protect the presentation with a password","Add notes visible only to the speaker"], ans:1, diff:"medium" },
+
+  { id:102, section:"MS PowerPoint", topic:"Slide Master",
+    q:"In Slide Master view, the TOPMOST (largest) slide at the top of the left panel is the:",
+    opts:["Title Slide Layout","Blank Layout","Master Slide — edits here apply to every slide in the presentation","Content Layout"], ans:2, diff:"medium" },
+
+  { id:103, section:"MS PowerPoint", topic:"Slide Master",
+    q:"To open Slide Master view, you go to:",
+    opts:["Insert → Slide Master","Design → Edit Master","View → Slide Master","Home → Layout → Master View"], ans:2, diff:"easy" },
+
+  { id:104, section:"MS PowerPoint", topic:"Slide Master",
+    q:"According to the class notes, Slide Master was first introduced in which version of PowerPoint?",
+    opts:["PowerPoint 2003","PowerPoint 2007","PowerPoint 97","PowerPoint 2016"], ans:2, diff:"hard" },
+
+  { id:105, section:"MS PowerPoint", topic:"Slide Master",
+    q:"A logo inserted on the Slide Master slide will appear on:",
+    opts:["Only the title slide","Only slides that use the 'Title and Content' layout","Every single slide in the presentation automatically","Only slides you manually drag it onto"], ans:2, diff:"medium" },
+
+  // ============================================================
+  // SECTION: MS POWERPOINT — Charts, Tables & SmartArt (Class 19)
+  // ============================================================
+
+  { id:106, section:"MS PowerPoint", topic:"Charts & SmartArt",
+    q:"To insert a Chart in PowerPoint, you go to:",
+    opts:["Design → Insert Chart","View → Chart Gallery","Insert → Chart → Choose type","Home → Drawing → Chart"], ans:2, diff:"easy" },
+
+  { id:107, section:"MS PowerPoint", topic:"Charts & SmartArt",
+    q:"Which SmartArt category is best for showing a step-by-step process or workflow?",
+    opts:["Hierarchy","Cycle","Process","Matrix"], ans:2, diff:"medium" },
+
+  { id:108, section:"MS PowerPoint", topic:"Charts & SmartArt",
+    q:"The professional design rule '6×6 Rule' in presentations means:",
+    opts:["Use 6 slides maximum with 6 images each","No more than 6 bullet points per slide and 6 words per bullet point","Use 6 colors and 6 fonts maximum","Each slide takes exactly 6 seconds to read"], ans:1, diff:"medium" },
+
+  { id:109, section:"MS PowerPoint", topic:"Charts & SmartArt",
+    q:"Using Sans-Serif fonts (like Calibri, Arial) in PowerPoint presentations is recommended because they are:",
+    opts:["More decorative and visually impressive","Easier to read on screen especially from the back of a room","Compatible with more operating systems","Required by professional printing standards"], ans:1, diff:"medium" },
+
+  { id:110, section:"MS PowerPoint", topic:"Charts & SmartArt",
+    q:"When delivering a presentation, which of the following is a common mistake to avoid?",
+    opts:["Making eye contact with the audience","Speaking slowly and clearly","Reading directly off the slides word-for-word","Using high-contrast text vs background"], ans:2, diff:"easy" },
+
 ];
+
+// ============================================================
+// WORD TASK BANK — Multiple question sets with full data
+// ============================================================
 
 const WORD_TASK_BANK = [
-  { id:"W01", marks:2, topic:"Styles",
-    desc:"Apply <strong>Heading 1</strong> style to the main document title and <strong>Heading 2</strong> to each hardware topic sub-section. (Home tab → Styles group)" },
+
+  // --- QUESTION SET 1: REPORT DOCUMENT ---
+  { id:"W01", marks:2, topic:"Mail Merge",
+    desc:"Create an Excel file with columns: <strong>FirstName, LastName, City, Grade</strong>. Add at least 6 student records. Then open Word → <strong>Mailings tab → Start Mail Merge → Letters</strong>. Select Recipients using your Excel file. Write a short invitation letter using merge fields: <em>Dear «FirstName» «LastName», your result from «City» is: «Grade».</em> Preview Results and Finish & Merge → Edit Individual Documents." },
+
   { id:"W02", marks:3, topic:"Table of Contents",
-    desc:"Insert an <strong>Automatic Table of Contents</strong> at the very beginning of the document. (References tab → Table of Contents → Automatic Table 1)" },
-  { id:"W03", marks:3, topic:"Header & Footer",
-    desc:"Add a <strong>Header</strong> showing the document title on the left. Add a <strong>Footer</strong> with your Roll Number on the left and today's date on the right. (Insert tab → Header / Footer)" },
-  { id:"W04", marks:2, topic:"Watermark",
-    desc:"Insert a <strong>Watermark</strong> with the text <em>'DRAFT'</em> visible in the background of all pages. (Design tab → Watermark → DRAFT)" },
-  { id:"W05", marks:2, topic:"Page Setup",
-    desc:"Change the <strong>Page Setup</strong>: Set Margins to <em>Narrow</em>, Orientation to <em>Portrait</em>, and Paper Size to <em>A4</em>. (Layout tab → Page Setup group)" },
-  { id:"W06", marks:1, topic:"Page Color",
-    desc:"Change the <strong>Page Color</strong> to a light color of your choice. (Design tab → Page Color)" },
-  { id:"W07", marks:2, topic:"Page Break",
-    desc:"Insert a <strong>Page Break</strong> before each hardware topic so every topic starts on a fresh page. (Ctrl + Enter OR Insert tab → Pages → Page Break)" },
-  { id:"W08", marks:2, topic:"Footnote",
-    desc:"Add at least <strong>one Footnote</strong> at the bottom of any page referencing a source or textbook. (References tab → Insert Footnote)" },
-  { id:"W09", marks:2, topic:"Find & Replace",
-    desc:"Use <strong>Find &amp; Replace</strong> (Ctrl+H) to replace the word <em>'computer'</em> with <em>'Computer'</em> (capital C) throughout the entire document." },
-  { id:"W10", marks:3, topic:"Table",
-    desc:"Insert a <strong>Table</strong> at the end of the document with 3 columns: <em>Component | Type | Description</em>. Fill in at least 5 hardware components with descriptions." },
-  { id:"W11", marks:1, topic:"Hyphenation",
-    desc:"Enable <strong>Automatic Hyphenation</strong> for the entire document. (Layout tab → Hyphenation → Automatic)" },
-  { id:"W12", marks:2, topic:"Font & Alignment",
-    desc:"Change the body text font to <strong>Times New Roman, Size 12</strong>. Apply <strong>Justify</strong> alignment to all body paragraphs (Ctrl+J)." },
-  { id:"W13", marks:2, topic:"Section Break",
-    desc:"Insert a <strong>Section Break (Next Page)</strong> between the Table of Contents and the first hardware topic. (Insert → Breaks → Next Page Section Break)" },
-  { id:"W14", marks:2, topic:"Shapes",
-    desc:"Insert a <strong>Shape</strong> (e.g., a rectangle) on any page to represent a hardware component. Add a text label inside the shape. (Insert tab → Shapes)" },
-  { id:"W15", marks:2, topic:"Endnote",
-    desc:"Add an <strong>Endnote</strong> at the end of the document listing all references. (References tab → Insert Endnote)" },
-  { id:"W16", marks:2, topic:"Table of Contents",
-    desc:"After completing all tasks, <strong>Update the Table of Contents</strong>: right-click the TOC → Update Field → Update entire table. Save with Ctrl+S." },
-  { id:"W17", marks:2, topic:"Text Formatting",
-    desc:"Apply <strong>Bold</strong> formatting to all headings and <strong>Italic</strong> to any technical terms (e.g., CPU, RAM, SSD) in the document. (Home tab → Font group)" },
-  { id:"W18", marks:2, topic:"Text Color",
-    desc:"Change the color of all <strong>Heading 1</strong> text to <em>Dark Blue</em> and all <strong>Heading 2</strong> text to <em>Dark Teal</em>. (Home tab → Font Color)" },
-  { id:"W19", marks:1, topic:"Line Spacing",
-    desc:"Set the <strong>Line Spacing</strong> of all body paragraphs to <em>1.5 lines</em>. (Home tab → Paragraph → Line Spacing)" },
-  { id:"W20", marks:2, topic:"Page Numbers",
-    desc:"Insert <strong>Page Numbers</strong> at the bottom center of every page. (Insert tab → Page Number → Bottom of Page → Center)" },
-  { id:"W21", marks:2, topic:"Lists",
-    desc:"Add a <strong>Numbered List</strong> of at least 5 hardware components anywhere in the document. Apply <strong>Bullet Points</strong> to their descriptions. (Home tab → Paragraph)" },
-  { id:"W22", marks:2, topic:"Indentation",
-    desc:"Apply a <strong>First Line Indent</strong> of 1 cm to all body paragraphs. (Home tab → Paragraph → Indentation → First Line)" },
-  { id:"W23", marks:2, topic:"Borders",
-    desc:"Add a <strong>Page Border</strong> to the entire document using any line style. (Design tab → Page Borders)" },
-  { id:"W24", marks:2, topic:"Columns",
-    desc:"Format one section of the document (any one hardware topic) to display in <strong>Two Columns</strong>. (Layout tab → Columns → Two)" },
-  { id:"W25", marks:2, topic:"Spell Check",
-    desc:"Run the <strong>Spell Check</strong> on the entire document and correct any errors found. (Review tab → Spelling & Grammar, or press F7)" },
-  { id:"W26", marks:2, topic:"Track Changes",
-    desc:"Turn on <strong>Track Changes</strong>, make three edits to the document, then accept all changes. (Review tab → Track Changes)" },
-  { id:"W27", marks:2, topic:"Picture",
-    desc:"Insert a <strong>picture</strong> related to computer hardware anywhere in the document. Resize it and apply a picture border. (Insert tab → Pictures)" },
-  { id:"W28", marks:2, topic:"Text Box",
-    desc:"Insert a <strong>Text Box</strong> containing a short definition of CPU or RAM. Position it in the margin area. (Insert tab → Text Box)" },
-  { id:"W29", marks:2, topic:"Landscape Section",
-    desc:"Create a section that uses <strong>Landscape orientation</strong> to display the hardware comparison table. Other sections should remain Portrait. (Layout tab → Orientation)" },
-  { id:"W30", marks:2, topic:"Cover Page",
-    desc:"Insert a formatted <strong>Cover Page</strong> at the beginning of the document with the document title, your name, and the date. (Insert tab → Cover Page)" },
+    desc:"Open a Word document. Type 5 section headings and apply <strong>Heading 1</strong> style to each. Add 2 paragraphs of body text below each heading. Then go to <strong>References → Table of Contents → Automatic Table 1</strong>. The TOC must show all 5 sections with correct page numbers. After completing the document, <strong>right-click the TOC → Update Field → Update Entire Table</strong>." },
+
+  { id:"W03", marks:2, topic:"Citations & Bibliography",
+    desc:"In a Word document, write a paragraph referencing a fact. Go to <strong>References → Insert Citation → Add New Source</strong>. Add 3 sources: one Book, one Website, and one Journal. Insert citations at relevant points in the text. Then go to <strong>References → Bibliography</strong> and choose <em>APA style</em>. A formatted bibliography must appear at the end of the document." },
+
+  { id:"W04", marks:2, topic:"Track Changes",
+    desc:"Open a Word document with at least 2 paragraphs. Go to <strong>Review tab → Track Changes → Track Changes (Ctrl+Shift+E)</strong> to turn it ON. Make 5 edits: add a sentence, delete a word, change a font, bold a phrase, and correct a spelling mistake. Then <strong>Accept 3 changes</strong> and <strong>Reject 2 changes</strong>. Also add 2 comments using <strong>Review → New Comment</strong> and resolve one of them." },
+
+  { id:"W05", marks:2, topic:"Digital Signature & Protection",
+    desc:"Open a Word document. Go to <strong>File → Info → Protect Document → Encrypt with Password</strong>. Set the password to <em>IT2026</em>. Close and reopen — confirm it asks for the password. Then in a different document, go to <strong>Review → Restrict Editing</strong>, allow only <em>'No changes (Read only)'</em>, and click <em>Yes, Start Enforcing Protection</em>. Set a password for the restriction." },
+
+  { id:"W06", marks:2, topic:"Macros",
+    desc:"Open MS Word. Go to <strong>View → Macros → Record Macro</strong>. Name it <em>FormatTitle</em> and assign a keyboard shortcut (e.g., Ctrl+Shift+F). Record the following actions: change font to <strong>Arial Black</strong>, size <strong>16</strong>, color <strong>Dark Blue</strong>, and apply <strong>Center alignment</strong>. Stop recording. Test your macro on a new paragraph using the shortcut key." },
+
+  { id:"W07", marks:2, topic:"AutoText",
+    desc:"In MS Word, type your full school name and address as a block of text. Select it all. Go to <strong>Insert → Quick Parts → AutoText → Save Selection to AutoText Gallery</strong>. Name the entry <em>SchoolHeader</em>. Click OK. Open a new blank document and type <em>SchoolHeader</em> then press <strong>F3</strong>. The full block should appear instantly. Practice inserting it 3 times in different locations." },
+
+  { id:"W08", marks:3, topic:"Poster / Flyer Design",
+    desc:"Create an IT event poster in Word. Go to <strong>Layout → Margins → Narrow</strong>. Set <strong>Design → Page Color</strong> to a dark color of choice. Insert at least 3 <strong>Shapes</strong> (Insert → Shapes) as design elements. Add a <strong>Text Box</strong> (Insert → Text Box) for the event title: <em>'Annual IT Exhibition 2026'</em>. Insert an <strong>Online Picture</strong> relevant to technology. Use maximum 3 fonts and ensure high contrast between text and background." },
+
+  // --- QUESTION SET 2: ACADEMIC DOCUMENT ---
+  { id:"W09", marks:2, topic:"Footnotes & Endnotes",
+    desc:"Open a document with at least 3 paragraphs. In paragraph 1, place your cursor after a fact and insert a <strong>Footnote</strong> (References → Insert Footnote). Type a source reference at the bottom of the page. In paragraph 3, insert an <strong>Endnote</strong> (References → Insert Endnote). Type a reference at the end of the document. Confirm footnote appears on page bottom and endnote at document end." },
+
+  { id:"W10", marks:2, topic:"Page Setup",
+    desc:"Open MS Word. Go to <strong>Layout → Page Setup</strong>. Set Margins to <em>Narrow</em>. Change Orientation to <em>Landscape</em>. Set Paper Size to <em>A4</em>. Then open the <strong>full Page Setup dialog (↘ arrow)</strong> and confirm all three settings are correct. Create a second section in the same document using <strong>Layout → Breaks → Section Break (Next Page)</strong> and change only that section back to <em>Portrait</em> orientation." },
+
+  { id:"W11", marks:2, topic:"Header & Footer",
+    desc:"In a Word document of at least 3 pages, go to <strong>Insert → Header</strong> and choose a style. Type the document title on the LEFT side of the header. Then go to <strong>Insert → Footer</strong> and add: your Roll Number on the left, today's date in the center (Insert → Date & Time), and an automatic page number on the right (Insert → Page Number → Current Position). Close Header & Footer and verify on all pages." },
+
+  { id:"W12", marks:2, topic:"Watermark & Page Color",
+    desc:"Open a multi-page Word document. Go to <strong>Design → Watermark</strong> and choose <em>CONFIDENTIAL</em>. Verify it appears on all pages. Then go to <strong>Design → Page Color</strong> and set the background to a light blue. Next, apply a <strong>Page Border</strong> (Design → Page Borders) using a double-line style. Confirm the watermark, background color, and border all appear together on every page." },
+
+  { id:"W13", marks:3, topic:"CV / Resume",
+    desc:"Create a professional CV in MS Word using the correct structure: <strong>Personal Information</strong> (name, phone, email, city), <strong>Education</strong> (reverse chronological), <strong>Work Experience</strong> (with action verbs), <strong>Skills</strong> (technical and soft), and <strong>References</strong>. Format using <em>Calibri 11pt</em>. Apply <strong>Bold Heading 1</strong> to each section title. Keep it to 2 pages maximum. Save as PDF using <em>File → Save As → PDF</em>." },
+
+  { id:"W14", marks:2, topic:"Find & Replace",
+    desc:"Open a document with at least 200 words. Press <strong>Ctrl+H</strong> to open Find & Replace. Replace the word <em>'computer'</em> (lowercase) with <em>'Computer'</em> (capital C) — click Replace All. Then use <strong>Find (Ctrl+F)</strong> to search for the word <em>'data'</em> and manually check each instance. Record how many replacements were made and how many times 'data' appears in the document." },
+
+  { id:"W15", marks:2, topic:"Shapes & Flowchart",
+    desc:"In MS Word, go to <strong>Insert → Shapes</strong> and create a simple flowchart showing the computer boot process. Use: an <strong>Oval</strong> for START, <strong>Rectangles</strong> for each step (Power Button → BIOS → POST → OS Loads → Desktop), and <strong>Arrows</strong> to connect them. Right-click each shape to add text inside it. Group all shapes using <strong>Ctrl+Click all → Right-click → Group</strong>." },
+
+  { id:"W16", marks:2, topic:"Section Break & Columns",
+    desc:"In a Word document, type an introduction paragraph. Insert a <strong>Section Break (Next Page)</strong> using Layout → Breaks. In the new section, go to <strong>Layout → Columns → Two</strong> to format that section in two columns. Type 3 paragraphs in this section — they should flow in two-column layout. After the two-column section, insert another <strong>Continuous Section Break</strong> and return to single-column format." },
+
+  { id:"W17", marks:2, topic:"Styles & Formatting",
+    desc:"Open a document with at least 4 headings. Apply <strong>Heading 1</strong> (Home → Styles) to main headings and <strong>Heading 2</strong> to sub-headings. Change the body text to <strong>Times New Roman, Size 12, Justified (Ctrl+J)</strong>. Set <strong>Line Spacing to 1.5</strong> (Home → Paragraph → Line Spacing). Apply <strong>First Line Indent of 1 cm</strong> to all body paragraphs (Home → Paragraph → Indentation → First Line)." },
+
+  { id:"W18", marks:3, topic:"Table of Contents + Page Break",
+    desc:"Build a complete structured document: 1) Apply <strong>Heading 1 & 2</strong> styles to all section titles. 2) Insert a <strong>Table of Contents</strong> (References → Automatic Table 1) at the beginning. 3) Insert a <strong>Page Break (Ctrl+Enter)</strong> before each major section so every section starts on a fresh page. 4) Add <strong>Page Numbers</strong> (Insert → Page Number → Bottom of Page → Center). 5) Update the TOC — right-click → Update Entire Table." },
+
+  // --- QUESTION SET 3: CREATIVE DOCUMENT ---
+  { id:"W19", marks:2, topic:"Page Break & Section Break",
+    desc:"Create a document with 4 sections. Insert a <strong>Page Break (Ctrl+Enter)</strong> between sections 1 and 2. Insert a <strong>Next Page Section Break</strong> (Layout → Breaks) between sections 2 and 3. Change section 3 to <strong>Landscape orientation</strong> while keeping all others Portrait. Insert a <strong>Continuous Section Break</strong> between sections 3 and 4. Verify each section has the correct formatting by checking Layout settings." },
+
+  { id:"W20", marks:2, topic:"Track Changes Advanced",
+    desc:"Open a document shared between two 'users'. Enable <strong>Track Changes (Ctrl+Shift+E)</strong>. Make at least 3 edits. Add 3 comments using <strong>Review → New Comment</strong> with suggestions. Add a <strong>Reply</strong> to one of your own comments. Change the username (File → Options → General → User Name) and make 2 more edits under the new username. View the markup to confirm both usernames appear in the tracked changes." },
+
+  { id:"W21", marks:2, topic:"Citations MLA Style",
+    desc:"Change your MS Word citation style to <strong>MLA</strong> (References → Style → MLA Seventh Edition). Add 4 new sources: 2 books, 1 website, and 1 journal article. Insert in-text citations for each source in the document. Create a <strong>Works Cited</strong> page using References → Bibliography → Works Cited. Press <strong>F9</strong> to update all fields. Verify the MLA format: Author. Title. Publisher, Year." },
+
+  { id:"W22", marks:2, topic:"Shapes & Text Box",
+    desc:"Create a one-page infographic in Word about computer hardware. Use at least 4 different <strong>Shapes</strong> (Insert → Shapes) with text inside them representing hardware components. Add 3 <strong>Text Boxes</strong> (Insert → Text Box → Draw Text Box) with descriptions. Apply <strong>Format Shape</strong> (right-click) to add fill colors, border styles, and shadow effects. <strong>Group</strong> all elements (Ctrl+A → Right-click → Group) so the infographic moves as one unit." },
+
+  { id:"W23", marks:2, topic:"Macro + AutoText Combined",
+    desc:"In MS Word: 1) Record a <strong>Macro</strong> named <em>HeadingFormat</em> that applies: Bold, size 14, Dark Red color, and Left Align. Assign shortcut <strong>Ctrl+Shift+H</strong>. Test it on 3 different headings. 2) Save the text block <em>'Prepared by: [Your Name] | Class: Grade 10 | Date: [Today's Date]'</em> as an <strong>AutoText</strong> entry named <em>DocFooter</em>. Insert it using F3 at the bottom of the document." },
+
+  { id:"W24", marks:3, topic:"Full Document Build",
+    desc:"Create a complete, professional 4-page document titled <em>'Computer Hardware Guide'</em> that includes: a <strong>Cover Page</strong> (Insert → Cover Page), a <strong>Table of Contents</strong>, at least 3 sections with <strong>Heading 1 & 2</strong> styles, a <strong>Header</strong> (title left, page number right), a <strong>Footer</strong> (your name and date), a <strong>Watermark</strong> (DRAFT), a <strong>Table</strong> comparing hardware components, at least one <strong>Footnote</strong>, and a <strong>Bibliography</strong> with 3 sources in APA style." },
+
 ];
 
+// ============================================================
+// EXCEL TASK BANK — Multiple question sets with full data
+// ============================================================
+
 const EXCEL_TASK_BANK = [
-  { id:"E01", marks:2, topic:"Merge & Center",
-    desc:"Select cells <strong>A1:H1</strong> and use <strong>Merge &amp; Center</strong>. Type the heading <em>'Student Results — Final Exam'</em>. Apply Bold, Font Size 14, and Blue font color." },
-  { id:"E02", marks:2, topic:"SUM Formula",
-    desc:"Use a <strong>SUM formula</strong> in column F to calculate Total marks (Math + English + Science + IT) for each student. E.g. <code>=SUM(B2:E2)</code>" },
-  { id:"E03", marks:2, topic:"AVERAGE Formula",
-    desc:"Use an <strong>AVERAGE formula</strong> in column G to calculate the average marks per student. E.g. <code>=AVERAGE(B2:E2)</code>" },
-  { id:"E04", marks:3, topic:"IF Formula",
-    desc:"Use a <strong>nested IF formula</strong> in column H for Grade: Average ≥ 85 → <em>'A'</em>, Average ≥ 70 → <em>'B'</em>, Average ≥ 55 → <em>'C'</em>, else → <em>'F'</em>." },
-  { id:"E05", marks:2, topic:"Conditional Formatting",
-    desc:"Apply <strong>Conditional Formatting</strong> on the Total column: highlight cells <strong>&gt; 320 in Green</strong> and cells <strong>&lt; 240 in Red</strong>. (Home → Conditional Formatting → Highlight Cell Rules)" },
-  { id:"E06", marks:2, topic:"Data Validation",
-    desc:"Add <strong>Data Validation</strong> on the Grade column to create a Drop-Down list with options: A, B, C, F. (Data tab → Data Validation → Allow: List)" },
-  { id:"E07", marks:3, topic:"Column Chart",
-    desc:"Create a <strong>Column Chart</strong> on a new sheet showing each student's Total marks. Add chart title: <em>'Student Total Marks'</em>. Label axes and customize bar colors." },
-  { id:"E08", marks:3, topic:"Pivot Table",
-    desc:"Create a <strong>Pivot Table</strong> on Sheet 3. Set Row = Student Name, Values = Average of Math, English, Science, and IT separately." },
-  { id:"E09", marks:1, topic:"Sort",
-    desc:"<strong>Sort</strong> the data on Sheet 1 by Total marks in <strong>Descending order</strong>. (Data tab → Sort → Column F → Largest to Smallest)" },
-  { id:"E10", marks:1, topic:"Freeze Panes",
-    desc:"<strong>Freeze the top two rows</strong> so headers stay visible when scrolling. (View tab → Freeze Panes → Freeze Top Row)" },
-  { id:"E11", marks:2, topic:"Number Formatting",
-    desc:"Format the <strong>Total column</strong> as Number with 0 decimal places. Format the <strong>Average column</strong> to show exactly 2 decimal places. (Home tab → Number Section)" },
-  { id:"E12", marks:2, topic:"AND Function",
-    desc:"Use the <strong>AND function</strong> in column I titled <em>'Pass All?'</em>: return TRUE if the student scored above 55 in ALL four subjects. E.g. <code>=AND(B2>55, C2>55, D2>55, E2>55)</code>" },
-  { id:"E13", marks:2, topic:"OR Function",
-    desc:"Use the <strong>OR function</strong> in column J titled <em>'Top Subject?'</em>: return TRUE if the student scored above 90 in ANY one subject. E.g. <code>=OR(B2>90, C2>90, D2>90, E2>90)</code>" },
-  { id:"E14", marks:2, topic:"Borders & Alignment",
-    desc:"Apply <strong>Wrap Text and Center alignment</strong> to all header cells. Apply <strong>All Borders</strong> to the entire data table." },
-  { id:"E15", marks:3, topic:"Summary Sheet",
-    desc:"Add a new sheet named <em>'Summary'</em>. Display: <strong>Highest Total</strong> (MAX), <strong>Lowest Total</strong> (MIN), and <strong>Class Average</strong> (AVERAGE) referencing Sheet 1 data." },
-  { id:"E16", marks:1, topic:"Protect Sheet",
-    desc:"<strong>Protect Sheet 1</strong> with the password <em>'IT2024'</em> so no edits can be made without the password. (Review tab → Protect Sheet)" },
-  { id:"E17", marks:2, topic:"MAX / MIN",
-    desc:"In a new row labeled 'Class Best', use <strong>MAX</strong> to find the highest mark in each subject column. In a row labeled 'Class Lowest', use <strong>MIN</strong>. E.g. <code>=MAX(B2:B9)</code>" },
-  { id:"E18", marks:2, topic:"Currency Format",
-    desc:"Add a new column called <em>'Scholarship (PKR)'</em>. Students with Average ≥ 85 get 5000, others get 0. Format the column as <strong>Currency</strong> with 0 decimal places." },
-  { id:"E19", marks:2, topic:"Conditional Formatting",
-    desc:"Apply <strong>Conditional Formatting</strong> on the Average column: top 3 values highlighted in <strong>Gold/Yellow</strong>, bottom 3 in <strong>Orange</strong>. (Home → Conditional Formatting → Top/Bottom Rules)" },
-  { id:"E20", marks:2, topic:"Text Functions",
-    desc:"Add a column titled <em>'Upper Name'</em>. Use the <strong>UPPER function</strong> to display each student's name in ALL CAPS. E.g. <code>=UPPER(A2)</code>" },
-  { id:"E21", marks:2, topic:"ROUND Function",
-    desc:"Add a column titled <em>'Rounded Avg'</em>. Use the <strong>ROUND function</strong> to round each student's average to the nearest whole number. E.g. <code>=ROUND(G2, 0)</code>" },
-  { id:"E22", marks:2, topic:"AutoFill",
-    desc:"In a new column, use <strong>AutoFill</strong> to create a sequence: Student 1, Student 2, … Student 8 automatically. Then in another row, fill the months January through August." },
-  { id:"E23", marks:3, topic:"Pie Chart",
-    desc:"Create a <strong>Pie Chart</strong> showing the percentage share of each student's Total out of the class grand total. Add a chart title: <em>'Total Marks Distribution'</em>." },
-  { id:"E24", marks:2, topic:"Remove Duplicates",
-    desc:"On a new sheet, paste the student names column. Manually add 3 duplicate names. Then use <strong>Remove Duplicates</strong> (Data tab) to clean the list." },
-  { id:"E25", marks:2, topic:"Text to Columns",
-    desc:"On a new sheet, create a column with full names like 'Ali Ahmed'. Use <strong>Text to Columns</strong> (Data tab → Text to Columns → Delimited → Space) to split into First Name and Last Name." },
-  { id:"E26", marks:2, topic:"TODAY Function",
-    desc:"Add a cell labeled <em>'Report Date'</em> and use the <strong>TODAY()</strong> function to display today's date. Format the cell with a date format showing day/month/year." },
-  { id:"E27", marks:2, topic:"CONCAT Function",
-    desc:"Add a column titled <em>'Full ID'</em>. Use <strong>CONCAT</strong> to combine the student's name and their total marks with a dash, e.g. 'Ali-325'. E.g. <code>=CONCAT(A2,\"-\",F2)</code>" },
-  { id:"E28", marks:2, topic:"Line Chart",
-    desc:"Create a <strong>Line Chart</strong> showing how marks vary across Math, English, Science, and IT for at least 3 students. Add a descriptive title." },
-  { id:"E29", marks:2, topic:"Cell Formatting",
-    desc:"Apply <strong>alternating row colors</strong> to the data table: odd rows light blue, even rows white. Use Fill Color from the Home tab." },
-  { id:"E30", marks:3, topic:"IF + AND Combined",
-    desc:"Add a column titled <em>'Merit Award'</em>. Use <strong>IF with AND</strong>: if a student's Total > 320 AND their IT marks > 85, display 'Merit Scholar'; otherwise display 'Standard'. E.g. <code>=IF(AND(F2>320, E2>85), \"Merit Scholar\", \"Standard\")</code>" },
-  { id:"E31", marks:2, topic:"Percentage Format",
-    desc:"Add a column titled <em>'% of Total'</em>. Calculate each student's total as a percentage of 400 (max possible marks). Format the column as <strong>Percentage</strong> with 1 decimal place." },
-  { id:"E32", marks:2, topic:"Spell Check",
-    desc:"Run <strong>Spell Check</strong> (F7 or Review tab → Spelling) on the entire Sheet 1 and correct any errors found in student names or labels." },
-  { id:"E33", marks:2, topic:"Freeze Columns",
-    desc:"Freeze <strong>Column A</strong> (Student Name) so it stays visible when scrolling right through all subject columns. (View tab → Freeze Panes → Freeze First Column)" },
-  { id:"E34", marks:2, topic:"Data Validation Range",
-    desc:"Add <strong>Data Validation</strong> on each subject marks column (B to E) to only allow numbers between 0 and 100. Show an error alert if the user types outside this range." },
-  { id:"E35", marks:3, topic:"Advanced IF",
-    desc:"Add a column titled <em>'Performance'</em>. Use a nested IF: Average ≥ 85 → 'Outstanding', Average ≥ 70 → 'Good', Average ≥ 55 → 'Average', else → 'Needs Improvement'." },
+
+  // --- QUESTION SET 1: STUDENT RESULTS ---
+  { id:"E01", marks:2, topic:"VLOOKUP",
+    desc:"Create a table on Sheet1 with columns: <strong>ID (A), Name (B), Subject (C), Marks (D)</strong>. Add 8 rows of data with IDs 101–108. On Sheet2, create a lookup area. In cell B2 of Sheet2, write a <strong>VLOOKUP</strong> formula to find a student's Name using their ID: <code>=VLOOKUP(A2, Sheet1!$A$2:$D$9, 2, FALSE)</code>. In B3, get their Marks. Use <strong>IFERROR</strong> to display <em>'Not Found'</em> if ID does not exist." },
+
+  { id:"E02", marks:3, topic:"HLOOKUP",
+    desc:"Create a horizontal data table in Row 1: <strong>Jan, Feb, Mar, Apr, May</strong> as headers. Row 2: Sales figures. Row 3: Profit figures. Row 4: Expenses. In a separate area, use <strong>HLOOKUP</strong> to find March Sales: <code>=HLOOKUP('Mar', A1:F4, 2, FALSE)</code>. Write 3 more HLOOKUP formulas to retrieve different Month + Row combinations. Format all monetary values as <strong>Currency (PKR)</strong>." },
+
+  { id:"E03", marks:3, topic:"INDEX & MATCH",
+    desc:"Build a student table: Name (A), City (B), Score (C), Grade (D) — 10 rows. Write an <strong>INDEX+MATCH</strong> formula to find a student's Score by name: <code>=INDEX(C2:C11, MATCH('Ali', A2:A11, 0))</code>. Write a second formula using INDEX+MATCH to look LEFT (find Name by Score). In a comments cell, write one key difference between INDEX+MATCH and VLOOKUP. Apply <strong>Conditional Formatting</strong> to highlight top 3 scores in green." },
+
+  { id:"E04", marks:2, topic:"COUNTIF / SUMIF / AVERAGEIF",
+    desc:"Create a sales table: <strong>Salesperson (A), Region (B), Sales_Amount (C), Month (D)</strong> — 15 rows with 3 regions (North, South, East) and 3 salespersons. Write: 1) <code>=COUNTIF(B2:B16,'North')</code> — count North region entries. 2) <code>=SUMIF(B2:B16,'South',C2:C16)</code> — total South sales. 3) <code>=AVERAGEIF(D2:D16,'January',C2:C16)</code> — average January sales. Label all results clearly." },
+
+  { id:"E05", marks:2, topic:"Nested IF / IFS",
+    desc:"Create a student marks table with 8 students and their Average score. In a <strong>Grade column</strong>, write a <strong>Nested IF</strong>: <code>=IF(G2>=90,'A+',IF(G2>=80,'A',IF(G2>=70,'B',IF(G2>=60,'C',IF(G2>=50,'D','F')))))</code>. In a <strong>Status column</strong>, use the <strong>IFS function</strong>: <code>=IFS(G2>=70,'Pass with Merit',G2>=50,'Pass',TRUE,'Fail')</code>. Drag both formulas down for all 8 students." },
+
+  { id:"E06", marks:2, topic:"Advanced Data Validation",
+    desc:"Create a student entry form. Set up <strong>Data Validation</strong> on: 1) Marks column — Allow: Whole Number, between 0 and 100. Set a <strong>Stop alert</strong> with title <em>'Invalid Marks'</em> and message <em>'Enter a number between 0 and 100'</em>. 2) Grade column — Allow: List, Source: A+, A, B, C, D, F. 3) Section column — Allow: Custom formula: <code>=LEN(A2)>=3</code> (minimum 3 characters). Test all three validations with invalid entries." },
+
+  { id:"E07", marks:3, topic:"Dependent Dropdown (Cascading)",
+    desc:"Build a <strong>dependent dropdown system</strong>: In Sheet2, Column A: Pakistan, USA, UK. Column C: Lahore, Karachi, Islamabad (for Pakistan). Column E: New York, Chicago, Houston (for USA). Column G: London, Manchester, Birmingham (for UK). <strong>Name each range</strong> (select range → Name Box → type Pakistan → Enter, repeat for others). On Sheet1: Cell A1 gets a dropdown of countries (Data Validation → List → =Sheet2!$A$1:$A$3). Cell B1 uses: <code>=INDIRECT(A1)</code> as the dependent dropdown source." },
+
+  { id:"E08", marks:2, topic:"Pivot Table",
+    desc:"Create a dataset with columns: <strong>Student Name, Subject, Term, Marks</strong> — at least 20 rows (5 students × 4 subjects × 1 term). Go to <strong>Insert → PivotTable → New Worksheet</strong>. Build a Pivot Table showing: <strong>Rows = Student Name, Columns = Subject, Values = Sum of Marks</strong>. Then add a second Pivot Table showing <strong>Average Marks per Subject</strong>. Apply a <strong>PivotTable Style</strong> from the Design tab." },
+
+  // --- QUESTION SET 2: BUDGET TRACKER ---
+  { id:"E09", marks:2, topic:"Budget Tracker",
+    desc:"Build a Budget Tracker with columns: <strong>Date (A), Description (B), Category (C), Income (D), Expense (E), Balance (F)</strong>. Enter 10 rows of data. In F2: <code>=D2-E2</code>. In F3 onwards use running balance: <code>=F2+D3-E3</code>. At the bottom: Total Income <code>=SUM(D2:D11)</code>, Total Expenses <code>=SUM(E2:E11)</code>, Net Balance <code>=SUM(D2:D11)-SUM(E2:E11)</code>. Add a column G: <code>=IF(E2>D2,'Over Budget!','')</code>." },
+
+  { id:"E10", marks:2, topic:"Conditional Formatting",
+    desc:"In your Budget Tracker or student marks sheet, apply <strong>3 different Conditional Formatting rules</strong>: 1) Expense column — highlight cells > 1000 in <strong>Red fill with dark red text</strong> (Home → Conditional Formatting → Highlight Cell Rules → Greater Than). 2) Balance column — highlight negative values in <strong>Orange</strong>. 3) Marks column — use <strong>Top/Bottom Rules → Top 3 Items</strong> with Gold/Yellow highlight. Verify all 3 rules appear in Manage Rules." },
+
+  { id:"E11", marks:2, topic:"Protect Sheet + Data Validation",
+    desc:"Create a student report card template. Lock all formula cells: select formula cells → <strong>Home → Format → Format Cells → Protection → check Locked</strong>. Select data-entry cells (marks columns) → <strong>uncheck Locked</strong>. Then go to <strong>Review → Protect Sheet</strong> with password <em>Class2026</em>. Check: 'Select locked cells' and 'Select unlocked cells' only. Verify formulas cannot be changed but marks can be entered." },
+
+  { id:"E12", marks:2, topic:"Text to Columns",
+    desc:"On a new sheet, create a column of full names with city: e.g., <em>'Ali Hassan - Lahore'</em>, <em>'Sara Khan - Karachi'</em> (10 entries with dashes). Select the column. Go to <strong>Data → Text to Columns → Delimited → check Other → enter: -</strong>. Click Finish to split into separate Name and City columns. Trim extra spaces using <code>=TRIM(A2)</code>. Then do a second task: split comma-separated subject marks into individual cells." },
+
+  { id:"E13", marks:2, topic:"HLOOKUP + VLOOKUP Combined",
+    desc:"Create a <strong>multi-row grade lookup table</strong>: Row 1 (horizontal): Student IDs as headers. Row 2: Marks. Row 3: Grade. Also create a <strong>vertical ID-to-Name table</strong> on the same sheet. Write one formula using <strong>HLOOKUP</strong> to find a student's grade by ID. Write another using <strong>VLOOKUP</strong> to find their name by ID. In a summary cell, combine them: <code>='Student: '&VLOOKUP(...)&' | Grade: '&HLOOKUP(...)</code>" },
+
+  { id:"E14", marks:3, topic:"Report Card Full Build",
+    desc:"Build a complete Student Report Card with 8 students and 5 subjects. Include: <strong>SUM formula</strong> for Total, <strong>AVERAGE</strong> for avg, <strong>Nested IF</strong> for Grade (A+/A/B/C/F), <strong>RANK function</strong> <code>=RANK(G2,$G$2:$G$9,0)</code> for class position, <strong>COUNTIF</strong> to count how many students got each grade, <strong>MAX/MIN</strong> for class best/lowest, <strong>Conditional Formatting</strong> (green ≥80, red <50), <strong>Merge & Center</strong> title, <strong>Freeze Row 1</strong>, and <strong>Protect Sheet</strong> with password." },
+
+  { id:"E15", marks:2, topic:"AND / OR with IF",
+    desc:"Create a table: Student Name (A), Math (B), English (C), Science (D), IT (E). Enter data for 8 students. Add column F: <strong>Merit Award</strong> using AND: <code>=IF(AND(B2>80,C2>80,D2>80,E2>80),'Full Merit','No')</code>. Add column G: <strong>Any Excellence</strong> using OR: <code>=IF(OR(B2>95,C2>95,D2>95,E2>95),'Outstanding in One!','')</code>. Add column H: <strong>Combined</strong>: <code>=IF(AND(B2+C2+D2+E2>320,OR(B2>90,E2>90)),'Merit Scholar','Standard')</code>." },
+
+  { id:"E16", marks:2, topic:"INDEX & MATCH Advanced",
+    desc:"Create a 10×5 dataset. Use <strong>INDEX+MATCH to look LEFT</strong> (finding Name based on Score — which VLOOKUP cannot do): <code>=INDEX(A2:A11, MATCH(MAX(C2:C11), C2:C11, 0))</code> to find the top scorer's name. Write a second formula to find the student with the MINIMUM score. Write a third formula: <code>=INDEX(B2:B11, MATCH('Target Name', A2:A11, 0))</code>. Compare these to equivalent VLOOKUP attempts and note any limitations." },
+
+  // --- QUESTION SET 3: ADVANCED FUNCTIONS ---
+  { id:"E17", marks:2, topic:"Advanced COUNTIF / SUMIF",
+    desc:"Create a dataset: Subject (A), Student (B), Score (C), Pass/Fail (D) — 20 rows. Write: 1) <code>=COUNTIF(D2:D21,'Pass')</code> — total passes. 2) <code>=COUNTIF(C2:C21,'>='&80)</code> — students scoring 80+. 3) <code>=SUMIF(A2:A21,'Math',C2:C21)</code> — total Math scores. 4) <code>=AVERAGEIF(A2:A21,'Science',C2:C21)</code> — avg Science score. 5) Build a summary table using these functions to show Pass/Fail count and average score per subject." },
+
+  { id:"E18", marks:2, topic:"Cascading Dropdown Validation",
+    desc:"Create a school timetable entry form. Build a <strong>3-level dependent dropdown</strong>: Grade (6th/7th/8th) → Section (A/B/C) → Subject (Math/English/Science/IT/Urdu). Name each range appropriately. Use <strong>INDIRECT</strong> for each dependent dropdown. Add Data Validation with a <strong>Warning alert</strong> (not Stop) on the marks entry column allowing values 0–100. Test by selecting different grades and verifying the section dropdown updates correctly." },
+
+  { id:"E19", marks:3, topic:"Pivot Table + Chart",
+    desc:"Create a sales dataset: Salesperson (A), Product (B), Region (C), Quarter (D), Revenue (E) — 25 rows minimum. Build a <strong>Pivot Table</strong> (Insert → PivotTable): Rows = Salesperson, Columns = Quarter, Values = Sum of Revenue. Add a second Pivot Table: Rows = Region, Values = Count of Salesperson AND Sum of Revenue. From the first Pivot Table, insert a <strong>Pivot Chart (Column type)</strong>. Customize: add chart title, axis labels, and change chart style." },
+
+  { id:"E20", marks:2, topic:"IFS + VLOOKUP Combined",
+    desc:"Create a product catalog: Product ID (A), Product Name (B), Category (C), Price (D) — 12 rows. On a separate lookup sheet, write a <strong>VLOOKUP</strong> to retrieve product name and price by ID. Then write an <strong>IFS formula</strong> based on Price: <code>=IFS(D2>5000,'Premium',D2>2000,'Mid-Range',D2>500,'Budget',TRUE,'Economy')</code>. Use <strong>IFERROR</strong> around the VLOOKUP: <code>=IFERROR(VLOOKUP(A2,...),'Product Not Found')</code>." },
+
+  { id:"E21", marks:2, topic:"Text to Columns + Remove Duplicates",
+    desc:"Sheet 1: Paste a list of 20 student entries as: <em>'Ali Hassan, Lahore, Grade A'</em> (comma separated, all in column A). Use <strong>Data → Text to Columns → Delimited → Comma</strong> to split into 3 columns. Sheet 2: Copy only the Names column and manually duplicate 5 entries. Use <strong>Data → Remove Duplicates</strong> to clean the list. Excel should report exactly how many duplicates were removed. Trim the data using <code>=TRIM(A2)</code> in an adjacent column." },
+
+  { id:"E22", marks:2, topic:"Budget Tracker Advanced",
+    desc:"Extend the Budget Tracker: Add a <strong>Category dropdown</strong> (Data Validation → List: Food, Transport, Education, Entertainment, Other). Add a Summary Sheet with: <code>=SUMIF(Category_Range, 'Food', Expense_Range)</code> for each category. Create a <strong>Pie Chart</strong> from the category totals showing expense distribution. Apply <strong>Conditional Formatting</strong> — highlight the highest expense category row in orange. Add a <strong>Sparkline</strong> (Insert → Sparklines → Line) to show expense trend." },
+
+  { id:"E23", marks:3, topic:"Full Excel Project",
+    desc:"Build a complete <strong>School Finance Tracker</strong>: Sheet 1 (Fees): Student Name, Class, Fee Amount, Paid (Yes/No), Date. Sheet 2 (Summary): Use <code>=COUNTIF</code> for total paid/unpaid, <code>=SUMIF</code> for total collected, <code>=AVERAGEIF</code> for average paid. Add: VLOOKUP to check a student's payment status by name, Conditional Formatting (Paid=Green, Unpaid=Red), a Column Chart of fees collected per class, Freeze Row 1, Protect Sheet (password: Finance2026), and a dependent dropdown for Class → Section." },
+
+  { id:"E24", marks:2, topic:"HLOOKUP Practical",
+    desc:"Create a <strong>quarterly sales report</strong> in horizontal format. Row 1: headers — Product, Q1, Q2, Q3, Q4. Rows 2–6: five products with quarterly sales figures. Use <strong>HLOOKUP</strong> to: 1) Find Q3 sales for a specific product. 2) Find Q1 profit (Row 3) for any quarter. 3) Find the Quarter with maximum sales using: <code>=INDEX(B1:E1, MATCH(MAX(B2:E2), B2:E2, 0))</code>. Format all figures as Currency and create a <strong>Line Chart</strong> showing quarterly trends for all 5 products." },
+
+];
+
+// ============================================================
+// POWERPOINT TASK BANK
+// ============================================================
+
+const PPT_TASK_BANK = [
+
+  // --- QUESTION SET 1: SLIDE MASTER ---
+  { id:"P01", marks:3, topic:"Slide Master",
+    desc:"Open a new PowerPoint. Go to <strong>View → Slide Master</strong>. Click the <strong>Master Slide (top, largest)</strong>. Set a background color of Dark Blue. Change all fonts: Title font → <strong>Arial Black</strong>, Body font → <strong>Calibri</strong>. Insert your school logo or name as a text box in the bottom-left corner — it must appear on ALL slides. Set the <strong>Color Theme</strong> (Slide Master tab → Colors) to a custom theme with 3 complementary colors. Add 5 content slides and verify the design is consistent." },
+
+  { id:"P02", marks:2, topic:"Slide Master Layouts",
+    desc:"In Slide Master view, click the <strong>Title and Content layout</strong> (second slide in the left panel). Change only this layout's font to <strong>Georgia</strong> for titles. In the <strong>Blank layout</strong>, insert a diagonal watermark text box saying <em>'IT CLASS 2026'</em> in light grey. Close Master View. Create 6 slides: 2 using Title and Content layout, 2 using the Blank layout, and 2 using the Two Content layout. Verify each layout shows its unique customization." },
+
+  { id:"P03", marks:2, topic:"Animations",
+    desc:"Create a 5-slide presentation about Computer Hardware. On Slide 2, add 4 bullet points. Animate each bullet point using <strong>Animations → Fly In (From Left)</strong>. Set the first bullet to <strong>On Click</strong>, the rest to <strong>After Previous</strong>. Open the <strong>Animation Pane (View → Animation Pane)</strong> and reorder animations. Set Duration to 0.5s for each. On Slide 3, animate an image using <strong>Fade</strong> (Entrance) and <strong>Spin</strong> (Emphasis) — both triggered On Click." },
+
+  { id:"P04", marks:2, topic:"Transitions",
+    desc:"Create an 8-slide presentation. Apply the <strong>Fade</strong> transition to all slides (Transitions → Fade → Apply to All). Then change Slide 3 to <strong>Morph</strong> transition — duplicate Slide 2, move one object on the copy, and the Morph transition will animate the movement. Set <strong>Transition Duration</strong> to 1 second for Morph. Use <strong>Slide Show → Rehearse Timings</strong> to set automatic timings. The total presentation should run in under 2 minutes." },
+
+  { id:"P05", marks:3, topic:"Charts & SmartArt",
+    desc:"Create a slide with a <strong>Column Chart</strong> (Insert → Chart → Column) showing 5 students' marks in 3 subjects. Customize: add Chart Title <em>'Student Performance Q1'</em>, add X and Y Axis Labels, change chart style (Chart Design → Chart Styles), change one bar color. On a new slide, insert <strong>SmartArt → Process → Basic Chevron Process</strong> with 5 steps showing the Mail Merge process. On a third slide, insert a <strong>Pie Chart</strong> showing software types distribution." },
+
+  { id:"P06", marks:2, topic:"Professional Design",
+    desc:"Apply the <strong>6×6 Rule</strong> to redesign a slide that has too much text (given by teacher). Each bullet should have max 6 words. Use 2-3 colors maximum. Apply <strong>high-contrast</strong> (dark text on light background OR white text on dark background). Use <strong>Align tools</strong> (Picture Format or Drawing Tools → Align → Align Left/Center) to neatly align all elements. Add <strong>one image</strong> per content slide. Export the final presentation as <strong>PDF</strong>: File → Export → Create PDF/XPS." },
+
+  // --- QUESTION SET 2: FULL PRESENTATIONS ---
+  { id:"P07", marks:3, topic:"Full Presentation — Hardware",
+    desc:"Create a <strong>7-slide IT Hardware presentation</strong> using Slide Master for consistent design. Slides: 1) Title Slide — 'Computer Hardware Guide'. 2) CPU. 3) RAM & Storage. 4) Motherboard. 5) GPU. 6) PSU. 7) Thank You. Requirements: Slide Master with school logo + consistent font/color. Each content slide must have at least 1 image + 3 bullet points (6×6 rule). Slide 4 must use SmartArt to show motherboard components. Include at least 2 different Entrance animations. Apply Fade transition to all." },
+
+  { id:"P08", marks:2, topic:"Tables in PowerPoint",
+    desc:"On a new slide, go to <strong>Insert → Table → 5 columns × 6 rows</strong>. In the table, compare: Hardware, Type, Speed, Size, and Example for 5 different memory types (Registers, Cache, RAM, ROM, HDD). Format the table: apply a <strong>Table Style</strong> (Table Design tab), make the header row <strong>Bold with Dark background and White text</strong>, set cell <strong>Text Alignment to Center</strong>, and resize column widths to fit content. The table must be readable and professional." },
+
+  { id:"P09", marks:2, topic:"Animations + Timing",
+    desc:"Create a 4-slide presentation about Cybersecurity. On Slide 2, list 5 cyber threats as bullet points. Animate them: Bullets 1–3 should appear <strong>On Click</strong> with <strong>Wipe from Left</strong>. Bullet 4 should appear <strong>With Previous</strong> (same click as 3) with <strong>Fade</strong>. Bullet 5 should appear <strong>After Previous</strong> with a 1-second Delay. Open the <strong>Animation Pane</strong> and verify the correct sequence. Add a <strong>Spin (Emphasis)</strong> animation to the slide title triggered After Previous." },
+
+  { id:"P10", marks:2, topic:"Slide Master + Design Rules",
+    desc:"Using Slide Master, build a <strong>professional brand template</strong>: Choose a 3-color palette (1 dominant, 1 supporting, 1 accent). Set a San-Serif font pair (Heading: Calibri, Body: Calibri Light). Insert a footer text on the Master that shows the class name and date. Create 2 custom layouts: one with a <strong>full-image background placeholder</strong> and one with a <strong>Two-Column layout</strong>. Close Master View. Build 6 slides — 3 using each custom layout. No two slides should have the same visual appearance." },
+
+  { id:"P11", marks:3, topic:"SmartArt + Chart + Table",
+    desc:"Create a presentation about Programming Languages with these slides: 1) <strong>Title Slide</strong>. 2) SmartArt: <strong>Hierarchy</strong> layout showing Software → System Software / Application Software / Utility Software with 2 examples each. 3) <strong>Table</strong> comparing Python, Java, and C++ across 5 criteria. 4) <strong>Bar Chart</strong> showing estimated popularity (Python 30%, Java 20%, JavaScript 25%, C++ 15%, Others 10%). 5) SmartArt: <strong>Process</strong> showing how a Compiler works (Write Code → Compile → .exe → Run). Apply consistent Slide Master design throughout." },
+
+  { id:"P12", marks:2, topic:"Animations Advanced",
+    desc:"Create a slide with a <strong>SmartArt Process diagram</strong> (5 steps). Animate it using <strong>Animations → Add Animation → Fly In</strong>. In the Animation Pane, set each step to appear <strong>After Previous</strong> with 0.5s delay. Add a <strong>text box</strong> that appears using <strong>Zoom (Entrance)</strong> On Click after all steps have loaded. Then add an <strong>Exit animation (Fade Out)</strong> to the SmartArt after the text box appears. Use <strong>Slide Show → From Beginning</strong> to test the complete animation sequence." },
+
+  { id:"P13", marks:2, topic:"Google Search Infographic",
+    desc:"Create a <strong>3-slide visual explainer</strong> of how Google Search works using PowerPoint. Slide 1: Title — <em>'How Google Works'</em>. Slide 2: Use <strong>SmartArt → Process</strong> to show the 3 stages: Crawling → Indexing → Ranking. Add descriptions in text boxes below each step. Slide 3: A <strong>table</strong> showing 6 Google Search tricks: Exact Phrase, site:, filetype:, *, -, OR operators with examples. Apply <strong>Morph transition</strong> between slides. Export as PDF." },
+
+  { id:"P14", marks:3, topic:"Full Cybersecurity Presentation",
+    desc:"Build a complete <strong>6-slide Cybersecurity Awareness presentation</strong>: 1) Title Slide with Slide Master applied. 2) Types of Threats — use SmartArt (Cycle or List) with 6 threats. 3) How Viruses Spread — Column Chart showing relative frequency of each spread method. 4) Strong Password Rules — text slide following 6×6 rule with checklist formatting. 5) Antivirus Protection — Table comparing 4 antivirus methods (Signature, Heuristic, Sandbox, Real-Time) across 3 criteria. 6) Summary / Thank You. Include: consistent Slide Master, transitions, at least 2 animations per slide, exported as PDF." },
+
+  { id:"P15", marks:2, topic:"AI Basics Visual Presentation",
+    desc:"Create a <strong>5-slide AI Basics presentation</strong>: 1) Title. 2) What is AI? — Insert SmartArt <strong>Cycle</strong> showing Input → Process → Output → Feedback. 3) Real-Life AI Examples — Table: AI Tool | Company | How It Works | Example Use (4 rows: Siri, ChatGPT, Google Assistant, Netflix Recommendations). 4) Chart — Bar chart showing AI adoption across industries (Education 40%, Healthcare 60%, Finance 75%, Retail 50%). 5) Future of AI — SmartArt Hierarchy. Apply custom Slide Master with tech-themed colors (dark navy + cyan accent)." },
+
 ];
 
 function shuffleArray(arr) {
@@ -839,33 +778,41 @@ function prepareQuestion(q) {
   };
 }
 
-function buildExamQuestions(hwCount, wordCount, excelCount) {
-  const hw    = shuffleArray(QUESTION_BANK.filter(q => q.section === "Hardware")).slice(0, hwCount);
-  const word  = shuffleArray(QUESTION_BANK.filter(q => q.section === "MS Word")).slice(0, wordCount);
-  const excel = shuffleArray(QUESTION_BANK.filter(q => q.section === "MS Excel")).slice(0, excelCount);
-  
-  return [...hw, ...word, ...excel].map(prepareQuestion);
+function buildExamQuestions(softwareCount, hardwareCount, wordCount, excelCount, pptCount) {
+  const sw   = shuffleArray(QUESTION_BANK.filter(q => q.section === "Software")).slice(0, softwareCount);
+  const hw   = shuffleArray(QUESTION_BANK.filter(q => q.section === "Hardware")).slice(0, hardwareCount);
+  const word = shuffleArray(QUESTION_BANK.filter(q => q.section === "MS Word")).slice(0, wordCount);
+  const xl   = shuffleArray(QUESTION_BANK.filter(q => q.section === "MS Excel")).slice(0, excelCount);
+  const ppt  = shuffleArray(QUESTION_BANK.filter(q => q.section === "MS PowerPoint")).slice(0, pptCount);
+
+  return [...sw, ...hw, ...word, ...xl, ...ppt].map(prepareQuestion);
 }
 
-function buildPracticalTasks(wordTaskCount, excelTaskCount) {
+function buildPracticalTasks(wordTaskCount, excelTaskCount, pptTaskCount) {
   const wordTasks  = shuffleArray(WORD_TASK_BANK).slice(0, wordTaskCount).sort((a,b)=>a.id.localeCompare(b.id));
   const excelTasks = shuffleArray(EXCEL_TASK_BANK).slice(0, excelTaskCount).sort((a,b)=>a.id.localeCompare(b.id));
-  
+  const pptTasks   = shuffleArray(PPT_TASK_BANK).slice(0, pptTaskCount).sort((a,b)=>a.id.localeCompare(b.id));
+
   wordTasks.forEach((t, i)  => t.num = i + 1);
   excelTasks.forEach((t, i) => t.num = i + 1);
-  return { wordTasks, excelTasks };
+  pptTasks.forEach((t, i)   => t.num = i + 1);
+  return { wordTasks, excelTasks, pptTasks };
 }
 
 const DEFAULT_EXAM_CONFIG = {
-  hwQuestions:    20,
-  wordQuestions:   5,
-  excelQuestions:  5,
-  wordTasks:      12,
-  excelTasks:     12,
-  timeMinutes:    45
+  softwareQuestions: 10,
+  hardwareQuestions: 10,
+  wordQuestions:      5,
+  excelQuestions:     5,
+  pptQuestions:       5,
+  wordTasks:          8,
+  excelTasks:         8,
+  pptTasks:           5,
+  timeMinutes:        60
 };
+
 (function cacheBanksForTeacher(){
-  try{
+  try {
     localStorage.setItem('exam_question_bank_cache', JSON.stringify(
       QUESTION_BANK.map(function(q){
         return {id:q.id, section:q.section, topic:q.topic, q:q.q, opts:q.opts, ans:q.ans, diff:q.diff};
@@ -881,5 +828,10 @@ const DEFAULT_EXAM_CONFIG = {
         return {id:t.id, topic:t.topic, marks:t.marks, desc:t.desc};
       })
     ));
-  }catch(e){}
+    localStorage.setItem('exam_ppt_task_bank_cache', JSON.stringify(
+      PPT_TASK_BANK.map(function(t){
+        return {id:t.id, topic:t.topic, marks:t.marks, desc:t.desc};
+      })
+    ));
+  } catch(e) {}
 })();
